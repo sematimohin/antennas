@@ -1,0 +1,362 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                      Transient Analysis of DiodnyPH                      ***
+***                           26.04.2025 16:41:46                            ***
+********************************************************************************
+Limits
+======
+Maximum Run Time           4m
+Output Start Time (tstart) 0
+Maximum Time Step          0.01u
+Number of Points           50001
+Temperature                Linear 27
+Retrace Runs               1
+Run Options                Normal
+State Variables            Zero
+Operating Point            On
+Operating Point Only       Off
+Auto Scale Ranges          On
+Accumulate Plots           Off
+Fixed Time Step            Off
+Periodic Steady State      Off
+Ignore Expression Errors   Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1         8.720E-028  2         1.746E-027  3         2.502E-019 
+4         2.502E-019  5         8.720E-028  6         8.730E-028 
+7         2.000E-033  8         2.000E-033  9         3.999E-033 
+10       -1.000E-033  11        3.000E-033  12        9.999E-029 
+13       -9.999E-029  14       -9.998E-029  15       -2.000E-033 
+16       -2.000E-033  17       -4.000E-033  18       -9.996E-029 
+19        1.000E-033  20       -3.000E-033  21       -9.996E-029 
+22        9.996E-029  X1.3      2.502E-019  X1.4      2.502E-019 
+X2.3      1.745E-027  X2.4      1.745E-027  X3.3      8.720E-028 
+X3.4      8.720E-028  X5.3     -9.829E-041  X5.4     -9.829E-041 
+X5.6      2.000E-033  X5.7      2.000E-033  X6.3      2.000E-033 
+X6.4      2.000E-033  X7.3      9.999E-029  X7.4      9.999E-029 
+X7.6      3.000E-033  X7.7      3.000E-033  X8.3      1.837E-044 
+X8.4      1.837E-044  X8.6     -2.000E-033  X8.7     -2.000E-033 
+X9.3     -2.000E-033  X9.4     -2.000E-033  X10.3     9.996E-029 
+X10.4     9.996E-029  X10.6    -3.000E-033  X10.7    -3.000E-033 
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                D1             D2             D3             D4
+Using model:           B360           B360           B360           B360
+
+Capacitance Terms:
+CAP                464.004p       464.004p       464.004p       464.004p
+
+Current Terms:
+ID              -2.502E-031    -9.999E-041     9.999E-041     9.996E-041
+
+Resistance Terms:
+REQ                2.025MEG       2.025MEG       2.025MEG       2.025MEG
+
+Voltage Terms:
+VD              -2.502E-019    -9.999E-029     9.999E-029     9.996E-029
+
+Power DC Terms:
+PD               6.258E-050     9.998E-069     9.997E-069     9.992E-069
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Id              -2.502E-031    -9.999E-041     9.999E-041     9.996E-041
+
+Condition:
+State                   OFF            OFF            OFF            OFF
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+ic                   0.000          0.000          0.000          0.000 
+
+
+Instance:                D5             D6             D7
+Using model:           B360           B360           B360
+
+Capacitance Terms:
+CAP                464.004p       464.004p       464.004p
+
+Current Terms:
+ID              -9.996E-041     9.996E-041    -9.996E-041
+
+Resistance Terms:
+REQ                2.025MEG       2.025MEG       2.025MEG
+
+Voltage Terms:
+VD              -9.996E-029     9.996E-029    -9.996E-029
+
+Power DC Terms:
+PD               9.993E-069     9.992E-069     9.992E-069
+PS                   0.000          0.000          0.000 
+
+DC Pin Currents:
+Id              -9.996E-041     9.996E-041    -9.996E-041
+
+Condition:
+State                   OFF            OFF            OFF
+
+Device Variables:
+area                 1.000          1.000          1.000 
+ic                   0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:              V1.RS             R1          V2.RS          V3.RS
+V                 8.720E-028     2.502E-019     8.720E-028     2.000E-033
+Power DC Terms:
+PD                7.603E-052     1.252E-039     7.603E-052     3.999E-063
+
+DC Pin Currents:
+Ir                8.720E-025     5.003E-021     8.720E-025     2.000E-030
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:              V4.RS             R2          V5.RS          V6.RS
+V                -1.000E-033    -9.999E-029    -2.000E-033     1.000E-033
+Power DC Terms:
+PD                1.000E-063     1.999E-058     4.000E-063     1.000E-063
+
+DC Pin Currents:
+Ir               -1.000E-030    -2.000E-030    -2.000E-030     1.000E-030
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                 R3          X1.R1          X1.R2          X2.R1
+V                -9.996E-029     2.502E-019    -5.003E-027     8.720E-028
+Power DC Terms:
+PD                1.998E-058     6.258E-053     2.503E-047     7.603E-070
+
+DC Pin Currents:
+Ir               -1.999E-030     2.502E-034    -5.003E-021     8.720E-043
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:              X2.R2          X3.R1          X3.R2          X5.R3
+V                 9.948E-031     8.720E-028     9.948E-031    -2.000E-033
+Power DC Terms:
+PD                9.896E-055     7.603E-070     9.896E-055     3.999E-081
+
+DC Pin Currents:
+Ir                9.948E-025     8.720E-043     9.948E-025    -2.000E-048
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:              X5.R4          X5.R5          X6.R1          X6.R2
+V                 9.829E-041     9.829E-041    -1.000E-033    -6.188E-045
+Power DC Terms:
+PD                9.660E-075     9.662E-075     1.000E-081     3.830E-083
+
+DC Pin Currents:
+Ir                9.829E-035     9.829E-035    -1.000E-048    -6.188E-039
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:              X7.R3          X7.R4          X7.R5          X8.R3
+V                 9.999E-029    -9.829E-041    -9.829E-041     2.000E-033
+Power DC Terms:
+PD                9.997E-072     9.661E-075     9.662E-075     4.000E-081
+
+DC Pin Currents:
+Ir                9.999E-044    -9.829E-035    -9.829E-035     2.000E-048
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:              X8.R4          X8.R5          X9.R1          X9.R2
+V                -1.837E-044    -1.976E-045     1.000E-033    -1.640E-044
+Power DC Terms:
+PD                3.375E-082     3.903E-084     1.000E-081     2.688E-082
+
+DC Pin Currents:
+Ir               -1.837E-038    -1.976E-039     1.000E-048    -1.640E-038
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:             X10.R3         X10.R4         X10.R5
+V                 9.996E-029    -1.975E-040    -1.975E-040
+Power DC Terms:
+PD                9.992E-072     3.899E-074     3.900E-074
+
+DC Pin Currents:
+Ir                9.996E-044    -1.975E-034    -1.975E-034
+
+Device Variables:
+tc1                   0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                 V1             V2             V3             V4
+Using model:            1MHZ          12MHZ           1MHZ          12MHZ
+V                 8.720E-028     8.720E-028     2.000E-033    -1.000E-033
+Power DC Terms:
+PG                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+ISource           8.720E-025     8.720E-025     2.000E-030    -1.000E-030
+
+
+Instance:                 V5             V6
+Using model:            1MHZ          12MHZ
+V                -2.000E-033     1.000E-033
+Power DC Terms:
+PG                    0.000          0.000 
+
+DC Pin Currents:
+ISource          -2.000E-030     1.000E-030
+
+
+
+Operating Point for Devices of Type Dependent Source
+====================================================
+Instance:             X1.E2          X2.E2          X3.E2          X5.E3
+V                2.502E-019     8.720E-028     8.720E-028    -2.000E-033
+Power DC Terms:
+PG               1.252E-039    -8.674E-052    -8.674E-052     1.965E-067
+
+DC Pin Currents:
+ISource         -5.003E-021     9.948E-025     9.948E-025     9.829E-035
+
+
+Instance:             X5.E4          X6.E2          X7.E3          X7.E4
+V               -2.000E-033    -1.000E-033     9.999E-029     9.999E-029
+Power DC Terms:
+PG               1.966E-067    -6.188E-072     9.827E-063     9.828E-063
+
+DC Pin Currents:
+ISource          9.829E-035    -6.188E-039    -9.829E-035    -9.829E-035
+
+
+Instance:             X8.E3          X8.E4          X9.E2         X10.E3
+V                2.000E-033     2.000E-033     1.000E-033     9.996E-029
+Power DC Terms:
+PG               3.674E-071     3.951E-072     1.640E-071     1.974E-062
+
+DC Pin Currents:
+ISource         -1.837E-038    -1.976E-039    -1.640E-038    -1.975E-034
+
+
+Instance:            X10.E4
+V                9.996E-029
+Power DC Terms:
+PG               1.974E-062
+
+DC Pin Currents:
+ISource         -1.975E-034
+
+
+
+Operating Point for Devices of Type SPICE Poly
+==============================================
+Instance:             X1.F1          X2.F1          X3.F1          X5.F1
+V                2.502E-019     8.720E-028     8.720E-028    -2.000E-033
+Power DC Terms:
+PG              -1.252E-039     8.674E-052     8.674E-052    -2.000E-063
+
+DC Pin Currents:
+ISource          5.003E-021    -9.948E-025    -9.948E-025    -1.000E-030
+
+
+Instance:             X5.F2          X6.F1          X7.F1          X7.F2
+V               -2.000E-033    -1.000E-033     9.999E-029     9.999E-029
+Power DC Terms:
+PG              -2.000E-063     1.000E-063    -9.999E-059    -9.999E-059
+
+DC Pin Currents:
+ISource         -1.000E-030     1.000E-030     1.000E-030     1.000E-030
+
+
+Instance:             X8.F1          X8.F2          X9.F1         X10.F1
+V                2.000E-033     2.000E-033     1.000E-033     9.996E-029
+Power DC Terms:
+PG              -2.000E-063    -2.000E-063    -1.000E-063    -9.996E-059
+
+DC Pin Currents:
+ISource          1.000E-030     1.000E-030     1.000E-030     1.000E-030
+
+
+Instance:            X10.F2
+V                9.996E-029
+Power DC Terms:
+PG              -9.996E-059
+
+DC Pin Currents:
+ISource          1.000E-030
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:             X1.V1          X2.V1          X3.V1          X5.V1
+V                    0.000          0.000      1.535E-040    -8.602E-046
+Power DC Terms:
+PG                   0.000          0.000      1.527E-064    -8.455E-080
+
+DC Pin Currents:
+ISource          5.003E-021    -9.948E-025    -9.948E-025    -9.829E-035
+
+
+Instance:             X5.V2          X6.V1          X7.V1          X7.V2
+V                    0.000     -1.574E-047         0.000          0.000 
+Power DC Terms:
+PG                   0.000      9.739E-086         0.000          0.000 
+
+DC Pin Currents:
+ISource         -9.829E-035     6.188E-039     9.829E-035     9.829E-035
+
+
+Instance:             X8.V1          X8.V2          X9.V1         X10.V1
+V                2.578E-049         0.000     -1.471E-046         0.000 
+Power DC Terms:
+PG              -4.737E-087         0.000      2.412E-084         0.000 
+
+DC Pin Currents:
+ISource          1.837E-038     1.976E-039     1.640E-038     1.975E-034
+
+
+Instance:            X10.V2
+V                    0.000 
+Power DC Terms:
+PG                   0.000 
+
+DC Pin Currents:
+ISource          1.975E-034
+
+

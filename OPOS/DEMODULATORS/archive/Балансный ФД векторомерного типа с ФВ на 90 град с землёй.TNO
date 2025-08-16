@@ -1,0 +1,31 @@
+********************************************************************************
+***                  Micro-Cap 10.0.9.1 Evaluation Version                   ***
+***                                   buuu                                   ***
+***                                   mpei                                   ***
+***  Transient Analysis of Балансный ФД векторомерного типа с ФВ на 90 град  ***
+***                                 с землёй                                 ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Time Range           2m
+Maximum Time Step    100n
+Number of Points     51
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      Off
+Operating Point Only Off
+
+Stepping Options
+================
+Stepping is Nested
+
+Step What  V1 PH
+From       -180*(pi/180)
+To         180*(pi/180)
+Step Value 20*(pi/180)
+Method     Linear
+
+

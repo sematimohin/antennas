@@ -1,0 +1,501 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                    Transient Analysis of demodulators                    ***
+***                           24.05.2025 14:02:37                            ***
+********************************************************************************
+Limits
+======
+Maximum Run Time           6m
+Output Start Time (tstart) 0
+Maximum Time Step          10n
+Number of Points           51
+Temperature                Linear 27
+Retrace Runs               1
+Run Options                Normal
+State Variables            Zero
+Operating Point            On
+Operating Point Only       Off
+Auto Scale Ranges          On
+Accumulate Plots           Off
+Fixed Time Step            Off
+Periodic Steady State      Off
+Ignore Expression Errors   Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1         5.482E-024  2            -0.274f  3         1.897E-024 
+4             0.000   5        -3.901E-025  6         4.474E-019 
+7             0.000   8        -1.137E-022  9             0.000  
+10        1.000E-050  11       -1.137E-022  12            0.000  
+13        1.000E-050  14       -1.137E-022  15            0.000  
+16        1.000E-050  17            0.000   18        1.000E-050 
+19            0.000   20        1.000E-050  21            0.000  
+22        1.000E-050  23       -3.093E-022  24       -2.615E-019 
+25       -3.773E-024  26           -0.001f  27        2.395E-024 
+28       -3.638E-020  29       -1.137E-022  30            0.000  
+31        1.000E-050  32       -1.137E-022  33            0.000  
+34        1.500E-050  35       -1.137E-022  36            0.000  
+37        5.000E-051  38            0.000   39        5.000E-051 
+40            0.000   41        1.000E-050  42            0.000  
+43        1.500E-050  44        2.395E-024  45       -3.638E-020 
+46       -3.756E-024  47           -0.001f  48       -3.093E-022 
+49       -2.073E-020  50            0.000   51        2.000E-051 
+52       -3.773E-024  53           -0.001f 
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                D1             D8             D9            D10
+Using model:         KD219A         KD219A         KD219A         KD219A
+
+Capacitance Terms:
+CAP                 63.102p        63.102p        63.102p        63.102p
+
+Current Terms:
+ID               5.500E-022     1.897E-036     4.474E-031    -4.474E-031
+
+Resistance Terms:
+REQ                502.914K       502.914K       502.914K       502.914K
+
+Voltage Terms:
+VD                   0.274f     1.897E-024     4.474E-019    -4.474E-019
+
+Power DC Terms:
+PD               1.507E-037     3.600E-060     2.002E-049     2.002E-049
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Id               5.500E-022     1.897E-036     4.474E-031    -4.474E-031
+
+Condition:
+State                   OFF            OFF            OFF            OFF
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+ic                   0.000          0.000          0.000          0.000 
+
+
+Instance:               D11            D12            D13            D17
+Using model:         KD219A         KD219A         KD219A         KD219A
+
+Capacitance Terms:
+CAP                 63.102p        63.102p        63.102p        63.102p
+
+Current Terms:
+ID               1.137E-034     1.137E-034     1.137E-034    -2.612E-031
+
+Resistance Terms:
+REQ                502.914K       502.914K       502.914K       502.914K
+
+Voltage Terms:
+VD               1.137E-022     1.137E-022     1.137E-022    -2.612E-019
+
+Power DC Terms:
+PD               1.293E-056     1.293E-056     1.293E-056     6.823E-050
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Id               1.137E-034     1.137E-034     1.137E-034    -2.612E-031
+
+Condition:
+State                   OFF            OFF            OFF            OFF
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+ic                   0.000          0.000          0.000          0.000 
+
+
+Instance:               D18            D19            D20            D21
+Using model:         KD219A         KD219A         KD219A         KD219A
+
+Capacitance Terms:
+CAP                 63.102p        63.102p        63.102p        63.102p
+
+Current Terms:
+ID               2.615E-031    -1.035E-030     1.035E-030    -3.639E-032
+
+Resistance Terms:
+REQ                502.914K       502.914K       502.914K       502.914K
+
+Voltage Terms:
+VD               2.615E-019        -0.001f         0.001f    -3.639E-020
+
+Power DC Terms:
+PD               6.839E-050     1.071E-048     1.071E-048     1.324E-051
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Id               2.615E-031    -1.035E-030     1.035E-030    -3.639E-032
+
+Condition:
+State                   OFF            OFF            OFF            OFF
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+ic                   0.000          0.000          0.000          0.000 
+
+
+Instance:               D22            D23            D24            D25
+Using model:         KD219A         KD219A         KD219A         KD219A
+
+Capacitance Terms:
+CAP                 63.102p        63.102p        63.102p        63.102p
+
+Current Terms:
+ID               3.638E-032     1.137E-034     1.137E-034     1.137E-034
+
+Resistance Terms:
+REQ                502.914K       502.914K       502.914K       502.914K
+
+Voltage Terms:
+VD               3.638E-020     1.137E-022     1.137E-022     1.137E-022
+
+Power DC Terms:
+PD               1.324E-051     1.293E-056     1.293E-056     1.293E-056
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Id               3.638E-032     1.137E-034     1.137E-034     1.137E-034
+
+Condition:
+State                   OFF            OFF            OFF            OFF
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+ic                   0.000          0.000          0.000          0.000 
+
+
+Instance:               D26            D27            D28            D29
+Using model:         KD219A         KD219A         KD219A         KD219A
+
+Capacitance Terms:
+CAP                 63.102p        63.102p        63.102p        63.102p
+
+Current Terms:
+ID              -3.639E-032     3.638E-032    -8.554E-031     8.554E-031
+
+Resistance Terms:
+REQ                502.914K       502.914K       502.914K       502.914K
+
+Voltage Terms:
+VD              -3.639E-020     3.638E-020        -0.001f         0.001f
+
+Power DC Terms:
+PD               1.324E-051     1.324E-051     7.316E-049     7.316E-049
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Id              -3.639E-032     3.638E-032    -8.554E-031     8.554E-031
+
+Condition:
+State                   OFF            OFF            OFF            OFF
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+ic                   0.000          0.000          0.000          0.000 
+
+
+Instance:               D30            D31            D32            D33
+Using model:         KD219A         KD219A         KD219A         KD219A
+
+Capacitance Terms:
+CAP                 63.102p        63.102p        63.102p        63.102p
+
+Current Terms:
+ID              -2.042E-032     2.073E-032    -1.035E-030     1.035E-030
+
+Resistance Terms:
+REQ                502.914K       502.914K       502.914K       502.914K
+
+Voltage Terms:
+VD              -2.042E-020     2.073E-020        -0.001f         0.001f
+
+Power DC Terms:
+PD               4.169E-052     4.296E-052     1.071E-048     1.071E-048
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Id              -2.042E-032     2.073E-032    -1.035E-030     1.035E-030
+
+Condition:
+State                   OFF            OFF            OFF            OFF
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+ic                   0.000          0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                 R1             R2             R3             R4
+V                    -0.274f     1.897E-024    -3.901E-025    -1.137E-022
+Power DC Terms:
+PD                1.502E-036     7.200E-052     3.044E-053     1.293E-048
+
+DC Pin Currents:
+Ir               -5.482E-021     3.795E-028    -7.803E-029    -1.137E-026
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:              V7.RS          V8.RS          V9.RS         V10.RS
+V                 5.482E-024         0.000          0.000          0.000 
+Power DC Terms:
+PD                3.005E-044         0.000          0.000          0.000 
+
+DC Pin Currents:
+Ir                5.482E-021         0.000          0.000          0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                 R5         V11.RS             R6         V12.RS
+V                -1.137E-022         0.000     -1.137E-022         0.000 
+Power DC Terms:
+PD                1.293E-048         0.000      1.293E-048         0.000 
+
+DC Pin Currents:
+Ir               -1.137E-026         0.000     -1.137E-026         0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:             V13.RS         V14.RS         V15.RS            R10
+V                     0.000          0.000          0.000     -3.093E-022
+Power DC Terms:
+PD                    0.000          0.000          0.000      9.564E-048
+
+DC Pin Currents:
+Ir                    0.000          0.000          0.000     -3.093E-026
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                R11            R12            R13         V16.RS
+V                -3.773E-024     2.395E-024    -1.137E-022         0.000 
+Power DC Terms:
+PD                1.424E-051     5.734E-052     1.293E-048         0.000 
+
+DC Pin Currents:
+Ir               -3.773E-028     2.395E-028    -1.137E-026         0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                R14         V17.RS            R15         V18.RS
+V                -1.137E-022         0.000     -1.137E-022         0.000 
+Power DC Terms:
+PD                1.293E-048         0.000      1.293E-048         0.000 
+
+DC Pin Currents:
+Ir               -1.137E-026         0.000     -1.137E-026         0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                R16            R17            R18         V19.RS
+V                 2.395E-024    -3.756E-024    -3.093E-022         0.000 
+Power DC Terms:
+PD                5.734E-052     1.411E-051     9.568E-048         0.000 
+
+DC Pin Currents:
+Ir                2.395E-028    -3.756E-028    -3.093E-026         0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:             V20.RS         V21.RS            R19         V22.RS
+V                     0.000          0.000     -3.773E-024         0.000 
+Power DC Terms:
+PD                    0.000          0.000      1.424E-051         0.000 
+
+DC Pin Currents:
+Ir                    0.000          0.000     -3.773E-028         0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                 C1             C2             C3             C4
+V                    -0.274f     1.897E-024     4.474E-019    -3.901E-025
+Power DC Terms:
+PS                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000          0.000 
+
+
+Instance:                 C5             C6             C7            C11
+V                -1.137E-022    -1.137E-022    -1.137E-022    -2.615E-019
+Power DC Terms:
+PS                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000          0.000 
+
+
+Instance:                C12            C13            C14            C15
+V                -3.093E-022        -0.001f    -3.773E-024    -3.638E-020
+Power DC Terms:
+PS                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000          0.000 
+
+
+Instance:                C16            C17            C18            C19
+V                 2.395E-024    -1.137E-022    -1.137E-022    -1.137E-022
+Power DC Terms:
+PS                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000          0.000 
+
+
+Instance:                C20            C21            C22            C23
+V                -3.638E-020     2.395E-024        -0.001f    -3.756E-024
+Power DC Terms:
+PS                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000          0.000 
+
+
+Instance:                C24            C25            C26            C27
+V                -2.073E-020    -3.093E-022        -0.001f    -3.773E-024
+Power DC Terms:
+PS                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                 V7             V8             V9            V10
+Using model:               A              A              A              B
+V                 5.482E-024         0.000          0.000          0.000 
+Power DC Terms:
+PG                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+ISource           5.482E-021         0.000          0.000          0.000 
+
+
+Instance:                V11            V12            V13            V14
+Using model:               C              D              B              C
+V                     0.000          0.000          0.000          0.000 
+Power DC Terms:
+PG                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+ISource               0.000          0.000          0.000          0.000 
+
+
+Instance:                V15            V16            V17            V18
+Using model:               D              G              G              G
+V                     0.000          0.000          0.000          0.000 
+Power DC Terms:
+PG                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+ISource               0.000          0.000          0.000          0.000 
+
+
+Instance:                V19            V20            V21            V22
+Using model:               G              G              G              G
+V                     0.000          0.000          0.000          0.000 
+Power DC Terms:
+PG                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+ISource               0.000          0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:             X1.E2          X2.E2          X3.E2          X4.E2
+V                1.000E-050     1.000E-050     1.000E-050     1.000E-050
+Power DC Terms:
+PG              -1.137E-076    -1.137E-076    -1.137E-076         0.000 
+
+DC Pin Currents:
+ISource          1.137E-026     1.137E-026     1.137E-026         0.000 
+
+
+Instance:             X5.E2          X6.E2          X7.E2          X8.E2
+V                1.000E-050     1.000E-050     1.000E-050     1.500E-050
+Power DC Terms:
+PG                   0.000          0.000     -1.137E-076    -1.706E-076
+
+DC Pin Currents:
+ISource              0.000          0.000      1.137E-026     1.137E-026
+
+
+Instance:             X9.E2         X10.E2         X11.E2         X12.E2
+V                5.000E-051     5.000E-051     1.000E-050     1.500E-050
+Power DC Terms:
+PG              -5.686E-077         0.000          0.000          0.000 
+
+DC Pin Currents:
+ISource          1.137E-026         0.000          0.000          0.000 
+
+
+Instance:            X13.E2
+V                2.000E-051
+Power DC Terms:
+PG                   0.000 
+
+DC Pin Currents:
+ISource              0.000 
+
+

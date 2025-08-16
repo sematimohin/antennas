@@ -1,0 +1,19 @@
+********************************************************************************
+***                  Micro-Cap 10.0.9.1 Evaluation Version                   ***
+***                                   buuu                                   ***
+***                                   mpei                                   ***
+***                   Transient Analysis of ÔÂ םא 90 דנאה                    ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Time Range           100u
+Maximum Time Step    10n
+Number of Points     51
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      Off
+Operating Point Only Off
+

@@ -1,0 +1,107 @@
+********************************************************************************
+***                  Micro-Cap 10.0.9.1 Evaluation Version                   ***
+***                                   buuu                                   ***
+***                                   mpei                                   ***
+***                   AC Analysis of Колебательный контур                    ***
+***                            24.11.2012 1:19:30                            ***
+********************************************************************************
+Limits
+======
+Frequency Range  Linear 1.8meg,0.2meg
+Number of Points 5001
+Temperature      Linear 27
+Maximum Change % 5
+Noise Input      NONE
+Noise Output     2
+Run Options      Normal
+State Variables  Zero
+Operating Point  On
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage 
+1             0.000   2             0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current 
+L1            0.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                R1         V1.RS
+V                    0.000         0.000 
+Power DC Terms:
+PD                   0.000         0.000 
+
+DC Pin Currents:
+Ir                   0.000         0.000 
+
+Device Variables:
+tc1                  0.000         0.000 
+tc2                  0.000         0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                L1
+V                    0.000 
+Power DC Terms:
+PS                   0.000 
+
+DC Pin Currents:
+Il                   0.000 
+
+Device Variables:
+ic                   0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                C1
+V                    0.000 
+Power DC Terms:
+PS                   0.000 
+
+DC Pin Currents:
+Ic                   0.000 
+
+Device Variables:
+ic                   0.000 
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                V1
+Using model:         SIGNAL
+V                    0.000 
+Power DC Terms:
+PG                   0.000 
+
+DC Pin Currents:
+ISource              0.000 
+
+
+
+Operating Point for Devices of Type Dependent Source
+====================================================
+Instance:               G1
+V                   0.000 
+Power DC Terms:
+PG                  0.000 
+
+DC Pin Currents:
+ISource             0.000 
+
+

@@ -1,0 +1,36 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                 Transient Analysis of balance_FD_s_FV_90                 ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Maximum Run Time           2m
+Output Start Time (tstart) 0
+Maximum Time Step          100n
+Number of Points           51
+Temperature                Linear 27
+Retrace Runs               1
+Run Options                Normal
+State Variables            Zero
+Operating Point            Off
+Operating Point Only       Off
+Auto Scale Ranges          On
+Accumulate Plots           Off
+Fixed Time Step            Off
+Periodic Steady State      Off
+Ignore Expression Errors   Off
+
+Stepping Options
+================
+Stepping is Nested
+
+Step What  V1 PH
+From       -180*(pi/180)
+To         180*(pi/180)
+Step Value 20*(pi/180)
+Method     Linear
+
+

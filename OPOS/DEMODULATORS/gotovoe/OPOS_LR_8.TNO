@@ -1,0 +1,129 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                     Transient Analysis of OPOS_LR_8                      ***
+***                            10.05.2025 0:20:28                            ***
+********************************************************************************
+Limits
+======
+Maximum Run Time           10u
+Output Start Time (tstart) 0
+Maximum Time Step          10n
+Number of Points           51
+Temperature                Linear 27
+Retrace Runs               1
+Run Options                Normal
+State Variables            Zero
+Operating Point            On
+Operating Point Only       Off
+Auto Scale Ranges          On
+Accumulate Plots           Off
+Fixed Time Step            Off
+Periodic Steady State      Off
+Ignore Expression Errors   Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1         1.331E-034  2        -6.655E-027  3         2.301E-026 
+4             0.000   5        -1.906E-032  6        -2.271E-020 
+7             0.000  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                D1             D8             D9            D10
+Using model:         KD219A         KD219A         KD219A         KD219A
+
+Capacitance Terms:
+CAP                  0.000          0.000          0.000          0.000 
+
+Current Terms:
+ID               6.655E-039     2.301E-038    -2.271E-032     2.271E-032
+
+Resistance Terms:
+REQ                721.170G       721.170G       721.170G       721.170G
+
+Voltage Terms:
+VD               6.655E-027     2.301E-026    -2.271E-020     2.271E-020
+
+Power DC Terms:
+PD               4.429E-065     5.294E-064     5.157E-052     5.157E-052
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Id               6.655E-039     2.301E-038    -2.271E-032     2.271E-032
+
+Condition:
+State                   OFF            OFF            OFF            OFF
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+ic                   0.000          0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                 R1             R2             R3          V7.RS
+V                -6.655E-027     2.301E-026    -1.906E-032     1.331E-034
+Power DC Terms:
+PD                8.859E-058     1.059E-056     7.269E-069     1.772E-065
+
+DC Pin Currents:
+Ir               -1.331E-031     4.602E-031    -3.813E-037     1.331E-031
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:              V8.RS          V9.RS
+V                     0.000          0.000 
+Power DC Terms:
+PD                    0.000          0.000 
+
+DC Pin Currents:
+Ir                    0.000          0.000 
+
+Device Variables:
+tc1                   0.000          0.000 
+tc2                   0.000          0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                 C1             C2             C3             C4
+V                -6.655E-027     2.301E-026    -2.271E-020    -1.906E-032
+Power DC Terms:
+PS                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                 V7             V8             V9
+Using model:               A              A              A
+V                 1.331E-034         0.000          0.000 
+Power DC Terms:
+PG                    0.000          0.000          0.000 
+
+DC Pin Currents:
+ISource           1.331E-031         0.000          0.000 
+
+

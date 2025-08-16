@@ -1,0 +1,153 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                         Dynamic DC of OPOS_LR_8                          ***
+***                           22.04.2023 20:57:02                            ***
+********************************************************************************
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node              Voltage  Node              Voltage 
+1                  0.000   OUT_SERIAL    -1.946E-020 
+3                  0.000   OUT_PARALLEL   1.958E-020 
+5                  0.000   OUT_DOUBLEV   -4.043E-023 
+7                  0.001f  OUT_AM             1.500  
+OUT_SERIAL_AM      1.308   10                 1.000  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                D1             D2             D3             D4
+Using model:         KD219A         KD219A         KD219A         KD219A
+
+Capacitance Terms:
+CAP                 63.102p        63.102p        63.102p        63.102p
+
+Current Terms:
+ID               1.946E-032     1.958E-032    -6.607E-031     6.608E-031
+
+Resistance Terms:
+REQ                502.914K       502.914K       502.914K       502.914K
+
+Voltage Terms:
+VD               1.946E-020     1.958E-020        -0.001f         0.001f
+
+Power DC Terms:
+PD               3.786E-052     3.832E-052     4.366E-049     4.366E-049
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Id               1.946E-032     1.958E-032    -6.607E-031     6.608E-031
+
+Condition:
+State                   OFF            OFF            OFF            OFF
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+ic                   0.000          0.000          0.000          0.000 
+
+
+Instance:                D5
+Using model:         KD219A
+
+Capacitance Terms:
+CAP                 74.804p
+
+Current Terms:
+ID                  43.598u
+
+Resistance Terms:
+REQ                663.562 
+
+Voltage Terms:
+VD                 192.073m
+
+Power DC Terms:
+PD                   8.374u
+PS                   0.000 
+
+DC Pin Currents:
+Id                  43.598u
+
+Condition:
+State                   OFF
+
+Device Variables:
+area                 1.000 
+ic                   0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                 R1             R2             R3             R4
+V                -1.946E-020     1.958E-020    -4.043E-023         1.308 
+Power DC Terms:
+PD                7.571E-044     7.665E-044     3.268E-049        57.022u
+
+DC Pin Currents:
+Ir               -3.891E-024     3.915E-024    -8.085E-027        43.598u
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                 C1             C2             C3             C4
+V                -1.946E-020     1.958E-020         0.001f    -4.043E-023
+Power DC Terms:
+PS                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000          0.000 
+
+
+Instance:                 C5
+V                     1.308 
+Power DC Terms:
+PS                    0.000 
+
+DC Pin Currents:
+Ic                    0.000 
+
+Device Variables:
+ic                    0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:             X1.E2
+V                    1.500 
+Power DC Terms:
+PG                  65.396u
+
+DC Pin Currents:
+ISource            -43.598u
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                V1             V2             V3             V4
+V                    0.000          0.000          0.000          1.000 
+Power DC Terms:
+PG                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+ISource          3.891E-024         0.000          0.000          0.000 
+
+

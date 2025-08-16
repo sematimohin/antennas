@@ -1,0 +1,30 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                         DC Analysis of OPOS_LR_8                         ***
+***                           22.04.2023 11:47:45                            ***
+********************************************************************************
+Limits
+======
+Variable 1 Method        Linear
+Variable 1 Name          V3
+Variable 1 Range         1,0,1m
+Variable 2 Method        None
+Variable 2 Name          TEMP
+Variable 2 Range         1,50m,1m
+Temperature              Linear 27
+Number of Points         51
+Maximum Change %         5
+Run Options              Normal
+Auto Scale Ranges        On
+Accumulate Plots         Off
+Ignore Expression Errors Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+

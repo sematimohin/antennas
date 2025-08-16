@@ -1,0 +1,4390 @@
+[Main]
+FileType=CIR
+Version=12.00
+Program=Micro-Cap
+Component Version=10.00
+Shape Version=11.00
+Screen=1366,768
+MCAPVersion=12.2.0.5
+Key ID=Demo
+NLCnt=260
+TXCnt=10
+
+[shapedef]
+Name=Battery
+Line=0,0,22,0
+Line=22,-3,22,3
+Line=26,-7,26,7
+Line=26,0,48,0
+Current=32,8,16,8
+
+[shapedef]
+Name=Bjt.root
+Line=0,0,13,0
+Rectangle=13,-12,15,12
+Current=32,-24,32,-16
+Current=32,24,32,16
+Current=0,-8,8,-8
+PolyOpen=3
+PolyLine=24,-24
+PolyLine=24,-12
+PolyLine=14,-2
+PolyOpen=3
+PolyLine=24,24
+PolyLine=24,12
+PolyLine=14,2
+
+[shapedef]
+Name=Capacitor
+Line=0,0,22,0
+Line=22,-8,22,8
+Line=26,-8,26,8
+Line=26,0,48,0
+Current=32,12,16,12
+
+[shapedef]
+Name=Ground
+Line=0,0,12,0
+Line=12,-8,12,8
+Line=18,-4,18,4
+Line=24,0,24,0
+
+[shapedef]
+Name=Inductor
+Line=42,0,48,0
+Line=0,0,5,0
+Arc=5,-7,17,7 , 11,-7,5,0
+Arc=13,-7,25,7 , 19,-7,13,0
+Arc=29,-7,41,7 , 35,-7,29,0
+Arc=21,-7,33,7 , 27,-7,21,0
+Arc=6,-7,18,7 , 18,0,12,-7
+Arc=14,-7,26,7 , 26,0,20,-7
+Arc=22,-7,34,7 , 34,0,28,-7
+Arc=30,-7,42,7 , 42,0,36,-7
+Line=11,-7,12,-7
+Line=19,-7,20,-7
+Line=27,-7,28,-7
+Line=35,-7,36,-7
+Arc=13,-4,17,2 , 13,-1,15,2
+Arc=29,-4,33,2 , 29,-1,31,2
+Arc=21,-4,25,2 , 21,-1,23,2
+Arc=14,-4,18,2 , 16,2,18,-1
+Arc=30,-4,34,2 , 32,2,34,-1
+Arc=22,-4,26,2 , 24,2,26,-1
+Line=15,2,16,2
+Line=23,2,24,2
+Line=31,2,32,2
+Line=5,5,9,5
+Line=41,5,41,9
+Line=39,7,43,7
+Current=32,8,16,8
+
+[shapedef]
+Name=NPN
+Root="Bjt.root",0,0,0
+PolyClosed=3
+PolyLine=20,12
+PolyLine=24,12
+PolyLine=24,8
+
+[shapedef]
+Name=Plus.root
+Line=-2,0,2,0
+Line=0,-2,0,2
+
+[shapedef]
+Name=Resistor
+PolyOpen=12
+PolyLine=0,0
+PolyLine=0,0
+PolyLine=12,0
+PolyLine=14,-4
+PolyLine=18,4
+PolyLine=22,-4
+PolyLine=26,4
+PolyLine=30,-4
+PolyLine=34,4
+PolyLine=36,0
+PolyLine=48,0
+PolyLine=48,0
+Current=32,8,16,8
+
+[shapedef]
+Name=Sine_Source
+Root="Vsource.root",0,0,0
+Line=24,-6,26,-4
+Line=26,-4,26,-2
+Line=26,-2,22,2
+Line=22,2,22,4
+Line=22,4,24,6
+
+[shapedef]
+Name=Vsource.root
+Line=0,0,12,0
+Line=36,0,48,0
+Ellipse=12,-12,36,12
+FColor=None
+Line=7,5,7,9
+Root="Plus.root",41,7,0
+Current=32,16,16,16
+
+[compdef]
+Name=Resistor
+Definition=Resistor
+Shape=Resistor
+Mask=7425
+Used=311
+memo=Resistor
+Label Offset=18,6,8,11
+PinCnt=2
+Pin="Plus",6,0,-10,-4
+Pin="Minus",0,0,-14,-4
+
+[compdef]
+Name=Inductor
+Definition=Inductor
+Shape=Inductor
+Mask=7937
+Used=85
+memo=Inductor
+Label Offset=18,9,11,12
+PinCnt=2
+Pin="Plus",6,0,-5,-9
+Pin="Minus",0,0,-3,-9
+
+[compdef]
+Name=Capacitor
+Definition=Capacitor
+Shape=Capacitor
+Mask=7425
+Used=131
+memo=Capacitor
+Label Offset=16,12,12,12
+PinCnt=2
+Pin="Plus",6,0,-3,-5
+Pin="Minus",0,0,-14,-5
+
+[compdef]
+Name=Battery
+Definition=Battery
+Shape=Battery
+Mask=7681
+Used=85
+memo=Battery
+Label Offset=19,7,10,13
+PinCnt=2
+Pin="Plus",6,0,-4,-5
+Pin="Minus",0,0,-10,-5
+
+[compdef]
+Name=NPN
+Definition=NPN
+Shape=NPN
+Mask=4097
+Used=45
+memo=NPN Transistor
+Label Offset=37,-17,-14,33
+PinCnt=3
+Pin="Collector",3,-3,4,14
+Pin="Base",0,0,-18,-3
+Pin="Emitter",3,3,5,1
+
+[compdef]
+Name=Sine Source
+Definition=Sine source
+Shape=Sine_Source
+Mask=5376
+Used=66
+memo=Sine Source
+Label Offset=18,12,15,12
+PinCnt=2
+Pin="Plus",6,0,-6,-6
+Pin="Minus",0,0,-19,-6
+
+[compdef]
+Name=Ground
+Definition=Ground
+Shape=Ground
+Mask=257
+Used=389
+memo=Ground
+Label Offset=0,0,0,0
+PinCnt=1
+Pin="PinA",0,0,-3,-7
+
+[Circuit]
+Window Placement=2,3, -1,-1, -8,-31, 78,78,964,443
+Default Object=Color=#000080
+Default Object Font=Height=-29,FStyle=0,Color=#0000FF,Name=Arial
+Default Object Apply Border To Text=No
+Default Object Apply Fill To Text=No
+Default Object GridSnap=No
+NodeVoltageFormat=3
+CurrentFormat=3
+PowerFormat=3
+PathDelayFormat=3
+WarningFormat=3
+GridTextFormulaFormat=3
+Window Placement in Transient Analysis=2,3, -1,-1, -8,-31, 104,104,1279,469
+SpiceType=AMBIGUOUS
+Title_Block_Border=None
+Title_Block=False
+Show Nodes=True
+Show Voltages=True
+Show Current=True
+Show Power=False
+Show Condition=False
+Show Pin Connections=False
+Show Connection Warnings=False
+Show Cross=False
+Show Attribute Text=True
+Show Grid Text=True
+
+[Comp]
+Name=Resistor
+Px=200,248
+Rot=3
+COff=8,176,223,-36,-37
+
+[Attr]
+ON=-24,-25,PART
+V=R1
+Style=8192
+
+[Attr]
+ON=16,-31,RESISTANCE
+V=36.4k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=384,192
+Rot=3
+COff=8,360,167,6,-19
+
+[Attr]
+ON=-24,-25,PART
+V=R2
+Style=8192
+
+[Attr]
+ON=-23,-9,RESISTANCE
+V=5k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Inductor
+Px=328,144
+Rot=7
+COff=8,295,153,-15,-4
+
+[Attr]
+ON=-33,9,PART
+V=L1
+Style=8192
+
+[Attr]
+ON=0,0,INDUCTANCE
+V=120u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=440,192
+Rot=3
+COff=8,454,158,-1,-19
+
+[Attr]
+ON=14,-34,PART
+V=C1
+Style=8192
+
+[Attr]
+ON=7,-17,CAPACITANCE
+V=202p
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Battery
+Px=568,144
+Rot=5
+
+[Attr]
+ON=10,-27,PART
+V=V1
+Style=8192
+
+[Attr]
+ON=10,-6,VALUE
+V=6
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=200,96,200,200
+
+[Wire]
+Pxs=200,96,384,96
+
+[Wire]
+Pxs=328,128,328,144
+
+[Wire]
+Pxs=328,128,384,128
+
+[Wire]
+Pxs=384,128,384,144
+
+[Wire]
+Pxs=384,128,440,128
+
+[Wire]
+Pxs=440,128,440,144
+
+[Wire]
+Pxs=384,96,384,128
+
+[Wire]
+Pxs=384,96,568,96
+
+[Wire]
+Pxs=328,192,328,208
+
+[Wire]
+Pxs=328,208,384,208
+
+[Wire]
+Pxs=440,192,440,208
+
+[Wire]
+Pxs=384,192,384,208
+
+[Wire]
+Pxs=384,208,440,208
+
+[Wire]
+Pxs=384,208,384,240
+
+[Comp]
+Name=Capacitor
+Px=432,240
+COff=8,448,252,7,-39
+
+[Attr]
+ON=16,12,PART
+V=C2
+Style=8192
+
+[Attr]
+ON=0,0,CAPACITANCE
+V=1u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=384,240,432,240
+
+[Wire]
+Pxs=480,240,568,240
+
+[Wire]
+Pxs=568,240,568,304
+
+[Comp]
+Name=Resistor
+Px=568,352
+Rot=3
+
+[Attr]
+ON=-24,-25,PART
+V=R3
+Style=8192
+
+[Attr]
+ON=0,0,RESISTANCE
+V=10k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=NPN
+Px=360,264
+COff=8,360,264,-46,-18
+COff=8,384,240,4,-17
+COff=8,384,288,7,-22
+
+[Attr]
+ON=37,-17,PART
+V=Q1
+Style=8192
+
+[Attr]
+ON=37,-3,MODEL
+V=2N706
+
+[Attr]
+ON=37,25,PACKAGE
+V=TO-18
+
+[Wire]
+Pxs=384,288,384,312
+
+[Wire]
+Pxs=384,312,408,312
+
+[Comp]
+Name=Capacitor
+Px=408,312
+
+[Attr]
+ON=16,12,PART
+V=C3
+Style=8192
+
+[Attr]
+ON=0,0,CAPACITANCE
+V=1u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Sine Source
+Px=464,384
+Rot=3
+
+[Attr]
+ON=-31,-26,PART
+V=V2
+Style=8192
+
+[Attr]
+ON=-50,-40,MODEL
+V=A
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=456,312,464,312
+
+[Wire]
+Pxs=464,312,464,336
+
+[Wire]
+Pxs=464,384,464,416
+
+[Wire]
+Pxs=464,416,568,416
+
+[Wire]
+Pxs=568,352,568,416
+
+[Comp]
+Name=Resistor
+Px=384,360
+Rot=3
+COff=8,360,335,-24,0
+
+[Attr]
+ON=-24,-25,PART
+V=R4
+Style=8192
+
+[Attr]
+ON=0,0,RESISTANCE
+V=250
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=384,360,384,416
+
+[Wire]
+Pxs=384,416,464,416
+
+[Wire]
+Pxs=200,264,360,264
+
+[Wire]
+Pxs=200,248,200,264
+
+[Wire]
+Pxs=200,264,200,312
+
+[Comp]
+Name=Resistor
+Px=200,360
+Rot=3
+COff=8,176,335,-26,-28
+
+[Attr]
+ON=-24,-25,PART
+V=R5
+Style=8192
+
+[Attr]
+ON=0,0,RESISTANCE
+V=51k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=200,360,200,416
+
+[Wire]
+Pxs=200,416,384,416
+
+[Comp]
+Name=Capacitor
+Px=112,264
+
+[Attr]
+ON=16,12,PART
+V=C4
+Style=8192
+
+[Attr]
+ON=0,0,CAPACITANCE
+V=1u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=160,264,200,264
+
+[Wire]
+Pxs=112,264,112,304
+
+[Comp]
+Name=Sine Source
+Px=112,352
+Rot=3
+
+[Attr]
+ON=-31,-26,PART
+V=V3
+Style=8192
+
+[Attr]
+ON=-50,-40,MODEL
+V=20MHZ
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=112,352,112,416
+
+[Wire]
+Pxs=112,416,200,416
+
+[Comp]
+Name=Ground
+Px=112,416
+Rot=7
+
+[Comp]
+Name=Ground
+Px=568,144
+Rot=7
+
+[Comp]
+Name=Resistor
+Px=808,240
+Rot=3
+COff=8,784,215,-36,-37
+
+[Attr]
+ON=-24,-25,PART
+V=R6
+Style=8192
+
+[Attr]
+ON=16,-31,RESISTANCE
+V=36.4k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=992,184
+Rot=3
+COff=8,968,159,6,-19
+
+[Attr]
+ON=-24,-25,PART
+V=R7
+Style=8192
+
+[Attr]
+ON=-23,-9,RESISTANCE
+V=5k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Inductor
+Px=936,136
+Rot=7
+COff=8,903,145,-15,-4
+
+[Attr]
+ON=-33,9,PART
+V=L2
+Style=8192
+
+[Attr]
+ON=0,0,INDUCTANCE
+V=120u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=1048,184
+Rot=3
+COff=8,1062,150,-1,-19
+
+[Attr]
+ON=14,-34,PART
+V=C5
+Style=8192
+
+[Attr]
+ON=7,-17,CAPACITANCE
+V=202p
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Battery
+Px=1176,136
+Rot=5
+
+[Attr]
+ON=10,-27,PART
+V=V4
+Style=8192
+
+[Attr]
+ON=10,-6,VALUE
+V=6
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=808,88,808,192
+
+[Wire]
+Pxs=808,88,992,88
+
+[Wire]
+Pxs=936,120,936,136
+
+[Wire]
+Pxs=936,120,992,120
+
+[Wire]
+Pxs=992,120,992,136
+
+[Wire]
+Pxs=992,120,1048,120
+
+[Wire]
+Pxs=1048,120,1048,136
+
+[Wire]
+Pxs=992,88,992,120
+
+[Wire]
+Pxs=992,88,1176,88
+
+[Wire]
+Pxs=936,184,936,200
+
+[Wire]
+Pxs=936,200,992,200
+
+[Wire]
+Pxs=1048,184,1048,200
+
+[Wire]
+Pxs=992,184,992,200
+
+[Wire]
+Pxs=992,200,1048,200
+
+[Wire]
+Pxs=992,200,992,232
+
+[Comp]
+Name=Capacitor
+Px=1040,232
+COff=8,1056,244,7,-39
+
+[Attr]
+ON=16,12,PART
+V=C6
+Style=8192
+
+[Attr]
+ON=0,0,CAPACITANCE
+V=1u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=992,232,1040,232
+
+[Wire]
+Pxs=1088,232,1176,232
+
+[Wire]
+Pxs=1176,232,1176,296
+
+[Comp]
+Name=Resistor
+Px=1176,344
+Rot=3
+
+[Attr]
+ON=-24,-25,PART
+V=R8
+Style=8192
+
+[Attr]
+ON=0,0,RESISTANCE
+V=10k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=NPN
+Px=968,256
+COff=8,968,256,-46,-18
+COff=8,992,232,4,-17
+COff=8,992,280,7,-22
+
+[Attr]
+ON=37,-17,PART
+V=Q2
+Style=8192
+
+[Attr]
+ON=37,-3,MODEL
+V=2N706
+
+[Attr]
+ON=37,25,PACKAGE
+V=TO-18
+
+[Wire]
+Pxs=992,280,992,304
+
+[Wire]
+Pxs=992,304,1016,304
+
+[Comp]
+Name=Capacitor
+Px=1016,304
+
+[Attr]
+ON=16,12,PART
+V=C7
+Style=8192
+
+[Attr]
+ON=0,0,CAPACITANCE
+V=1u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Sine Source
+Px=1072,376
+Rot=3
+
+[Attr]
+ON=-31,-26,PART
+V=V5
+Style=8192
+
+[Attr]
+ON=-50,-40,MODEL
+V=B
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1064,304,1072,304
+
+[Wire]
+Pxs=1072,304,1072,328
+
+[Wire]
+Pxs=1072,376,1072,408
+
+[Wire]
+Pxs=1072,408,1176,408
+
+[Wire]
+Pxs=1176,344,1176,408
+
+[Comp]
+Name=Resistor
+Px=992,352
+Rot=3
+COff=8,968,327,-24,0
+
+[Attr]
+ON=-24,-25,PART
+V=R9
+Style=8192
+
+[Attr]
+ON=0,0,RESISTANCE
+V=250
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=992,352,992,408
+
+[Wire]
+Pxs=992,408,1072,408
+
+[Wire]
+Pxs=808,256,968,256
+
+[Wire]
+Pxs=808,240,808,256
+
+[Wire]
+Pxs=808,256,808,304
+
+[Comp]
+Name=Resistor
+Px=808,352
+Rot=3
+COff=8,784,327,-26,-28
+
+[Attr]
+ON=-24,-25,PART
+V=R10
+Style=8192
+
+[Attr]
+ON=0,0,RESISTANCE
+V=51k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=808,352,808,408
+
+[Wire]
+Pxs=808,408,992,408
+
+[Comp]
+Name=Capacitor
+Px=720,256
+
+[Attr]
+ON=16,12,PART
+V=C8
+Style=8192
+
+[Attr]
+ON=0,0,CAPACITANCE
+V=1u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=768,256,808,256
+
+[Wire]
+Pxs=720,256,720,296
+
+[Comp]
+Name=Sine Source
+Px=720,344
+Rot=3
+
+[Attr]
+ON=-31,-26,PART
+V=V6
+Style=8192
+
+[Attr]
+ON=-50,-40,MODEL
+V=20MHZ
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=720,344,720,408
+
+[Wire]
+Pxs=720,408,808,408
+
+[Comp]
+Name=Ground
+Px=720,408
+Rot=7
+
+[Comp]
+Name=Ground
+Px=1176,136
+Rot=7
+
+[Comp]
+Name=Resistor
+Px=1376,240
+Rot=3
+COff=8,1352,215,-36,-37
+
+[Attr]
+ON=-24,-25,PART
+V=R11
+Style=8192
+
+[Attr]
+ON=16,-31,RESISTANCE
+V=36.4k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=1560,184
+Rot=3
+COff=8,1536,159,6,-19
+
+[Attr]
+ON=-24,-25,PART
+V=R12
+Style=8192
+
+[Attr]
+ON=-23,-9,RESISTANCE
+V=5k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Inductor
+Px=1504,136
+Rot=7
+COff=8,1471,145,-15,-4
+
+[Attr]
+ON=-33,9,PART
+V=L3
+Style=8192
+
+[Attr]
+ON=0,0,INDUCTANCE
+V=120u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=1616,184
+Rot=3
+COff=8,1630,150,-1,-19
+
+[Attr]
+ON=14,-34,PART
+V=C9
+Style=8192
+
+[Attr]
+ON=7,-17,CAPACITANCE
+V=202p
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Battery
+Px=1744,136
+Rot=5
+
+[Attr]
+ON=10,-27,PART
+V=V7
+Style=8192
+
+[Attr]
+ON=10,-6,VALUE
+V=6
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1376,88,1376,192
+
+[Wire]
+Pxs=1376,88,1560,88
+
+[Wire]
+Pxs=1504,120,1504,136
+
+[Wire]
+Pxs=1504,120,1560,120
+
+[Wire]
+Pxs=1560,120,1560,136
+
+[Wire]
+Pxs=1560,120,1616,120
+
+[Wire]
+Pxs=1616,120,1616,136
+
+[Wire]
+Pxs=1560,88,1560,120
+
+[Wire]
+Pxs=1560,88,1744,88
+
+[Wire]
+Pxs=1504,184,1504,200
+
+[Wire]
+Pxs=1504,200,1560,200
+
+[Wire]
+Pxs=1616,184,1616,200
+
+[Wire]
+Pxs=1560,184,1560,200
+
+[Wire]
+Pxs=1560,200,1616,200
+
+[Wire]
+Pxs=1560,200,1560,232
+
+[Comp]
+Name=Capacitor
+Px=1608,232
+COff=8,1624,244,7,-39
+
+[Attr]
+ON=16,12,PART
+V=C10
+Style=8192
+
+[Attr]
+ON=0,0,CAPACITANCE
+V=1u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1560,232,1608,232
+
+[Wire]
+Pxs=1656,232,1744,232
+
+[Wire]
+Pxs=1744,232,1744,296
+
+[Comp]
+Name=Resistor
+Px=1744,344
+Rot=3
+
+[Attr]
+ON=-24,-25,PART
+V=R13
+Style=8192
+
+[Attr]
+ON=0,0,RESISTANCE
+V=10k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=NPN
+Px=1536,256
+COff=8,1536,256,-46,-18
+COff=8,1560,232,4,-17
+COff=8,1560,280,7,-22
+
+[Attr]
+ON=37,-17,PART
+V=Q3
+Style=8192
+
+[Attr]
+ON=37,-3,MODEL
+V=2N706
+
+[Attr]
+ON=37,25,PACKAGE
+V=TO-18
+
+[Wire]
+Pxs=1560,280,1560,304
+
+[Wire]
+Pxs=1560,304,1584,304
+
+[Comp]
+Name=Capacitor
+Px=1584,304
+
+[Attr]
+ON=16,12,PART
+V=C11
+Style=8192
+
+[Attr]
+ON=0,0,CAPACITANCE
+V=1u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Sine Source
+Px=1640,376
+Rot=3
+
+[Attr]
+ON=-31,-26,PART
+V=V8
+Style=8192
+
+[Attr]
+ON=-50,-40,MODEL
+V=C
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1632,304,1640,304
+
+[Wire]
+Pxs=1640,304,1640,328
+
+[Wire]
+Pxs=1640,376,1640,408
+
+[Wire]
+Pxs=1640,408,1744,408
+
+[Wire]
+Pxs=1744,344,1744,408
+
+[Comp]
+Name=Resistor
+Px=1560,352
+Rot=3
+COff=8,1536,327,-24,0
+
+[Attr]
+ON=-24,-25,PART
+V=R14
+Style=8192
+
+[Attr]
+ON=0,0,RESISTANCE
+V=250
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1560,352,1560,408
+
+[Wire]
+Pxs=1560,408,1640,408
+
+[Wire]
+Pxs=1376,256,1536,256
+
+[Wire]
+Pxs=1376,240,1376,256
+
+[Wire]
+Pxs=1376,256,1376,304
+
+[Comp]
+Name=Resistor
+Px=1376,352
+Rot=3
+COff=8,1352,327,-26,-28
+
+[Attr]
+ON=-24,-25,PART
+V=R15
+Style=8192
+
+[Attr]
+ON=0,0,RESISTANCE
+V=51k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1376,352,1376,408
+
+[Wire]
+Pxs=1376,408,1560,408
+
+[Comp]
+Name=Capacitor
+Px=1288,256
+
+[Attr]
+ON=16,12,PART
+V=C12
+Style=8192
+
+[Attr]
+ON=0,0,CAPACITANCE
+V=1u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1336,256,1376,256
+
+[Wire]
+Pxs=1288,256,1288,296
+
+[Comp]
+Name=Sine Source
+Px=1288,344
+Rot=3
+
+[Attr]
+ON=-31,-26,PART
+V=V9
+Style=8192
+
+[Attr]
+ON=-50,-40,MODEL
+V=20MHZ
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1288,344,1288,408
+
+[Wire]
+Pxs=1288,408,1376,408
+
+[Comp]
+Name=Ground
+Px=1288,408
+Rot=7
+
+[Comp]
+Name=Ground
+Px=1744,136
+Rot=7
+
+[Comp]
+Name=Resistor
+Px=200,624
+Rot=3
+COff=8,176,599,-36,-37
+
+[Attr]
+ON=-24,-25,PART
+V=R16
+Style=8192
+
+[Attr]
+ON=16,-31,RESISTANCE
+V=36.4k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=384,568
+Rot=3
+COff=8,360,543,6,-19
+
+[Attr]
+ON=-24,-25,PART
+V=R17
+Style=8192
+
+[Attr]
+ON=-23,-9,RESISTANCE
+V=5k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Inductor
+Px=328,520
+Rot=7
+COff=8,295,529,-15,-4
+
+[Attr]
+ON=-33,9,PART
+V=L4
+Style=8192
+
+[Attr]
+ON=0,0,INDUCTANCE
+V=120u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=440,568
+Rot=3
+COff=8,454,534,-1,-19
+
+[Attr]
+ON=14,-34,PART
+V=C13
+Style=8192
+
+[Attr]
+ON=7,-17,CAPACITANCE
+V=202p
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Battery
+Px=568,520
+Rot=5
+
+[Attr]
+ON=10,-27,PART
+V=V10
+Style=8192
+
+[Attr]
+ON=10,-6,VALUE
+V=6
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=200,472,200,576
+
+[Wire]
+Pxs=200,472,384,472
+
+[Wire]
+Pxs=328,504,328,520
+
+[Wire]
+Pxs=328,504,384,504
+
+[Wire]
+Pxs=384,504,384,520
+
+[Wire]
+Pxs=384,504,440,504
+
+[Wire]
+Pxs=440,504,440,520
+
+[Wire]
+Pxs=384,472,384,504
+
+[Wire]
+Pxs=384,472,568,472
+
+[Wire]
+Pxs=328,568,328,584
+
+[Wire]
+Pxs=328,584,384,584
+
+[Wire]
+Pxs=440,568,440,584
+
+[Wire]
+Pxs=384,568,384,584
+
+[Wire]
+Pxs=384,584,440,584
+
+[Wire]
+Pxs=384,584,384,616
+
+[Comp]
+Name=Capacitor
+Px=432,616
+COff=8,448,628,7,-39
+
+[Attr]
+ON=16,12,PART
+V=C14
+Style=8192
+
+[Attr]
+ON=0,0,CAPACITANCE
+V=1u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=384,616,432,616
+
+[Wire]
+Pxs=480,616,568,616
+
+[Wire]
+Pxs=568,616,568,680
+
+[Comp]
+Name=Resistor
+Px=568,728
+Rot=3
+
+[Attr]
+ON=-24,-25,PART
+V=R18
+Style=8192
+
+[Attr]
+ON=0,0,RESISTANCE
+V=10k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=NPN
+Px=360,640
+COff=8,360,640,-46,-18
+COff=8,384,616,4,-17
+COff=8,384,664,7,-22
+
+[Attr]
+ON=37,-17,PART
+V=Q4
+Style=8192
+
+[Attr]
+ON=37,-3,MODEL
+V=2N706
+
+[Attr]
+ON=37,25,PACKAGE
+V=TO-18
+
+[Wire]
+Pxs=384,664,384,688
+
+[Wire]
+Pxs=384,688,408,688
+
+[Comp]
+Name=Capacitor
+Px=408,688
+
+[Attr]
+ON=16,12,PART
+V=C15
+Style=8192
+
+[Attr]
+ON=0,0,CAPACITANCE
+V=1u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Sine Source
+Px=464,760
+Rot=3
+
+[Attr]
+ON=-31,-26,PART
+V=V11
+Style=8192
+
+[Attr]
+ON=-50,-40,MODEL
+V=D
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=456,688,464,688
+
+[Wire]
+Pxs=464,688,464,712
+
+[Wire]
+Pxs=464,760,464,792
+
+[Wire]
+Pxs=464,792,568,792
+
+[Wire]
+Pxs=568,728,568,792
+
+[Comp]
+Name=Resistor
+Px=384,736
+Rot=3
+COff=8,360,711,-24,0
+
+[Attr]
+ON=-24,-25,PART
+V=R19
+Style=8192
+
+[Attr]
+ON=0,0,RESISTANCE
+V=250
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=384,736,384,792
+
+[Wire]
+Pxs=384,792,464,792
+
+[Wire]
+Pxs=200,640,360,640
+
+[Wire]
+Pxs=200,624,200,640
+
+[Wire]
+Pxs=200,640,200,688
+
+[Comp]
+Name=Resistor
+Px=200,736
+Rot=3
+COff=8,176,711,-26,-28
+
+[Attr]
+ON=-24,-25,PART
+V=R20
+Style=8192
+
+[Attr]
+ON=0,0,RESISTANCE
+V=51k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=200,736,200,792
+
+[Wire]
+Pxs=200,792,384,792
+
+[Comp]
+Name=Capacitor
+Px=112,640
+
+[Attr]
+ON=16,12,PART
+V=C16
+Style=8192
+
+[Attr]
+ON=0,0,CAPACITANCE
+V=1u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=160,640,200,640
+
+[Wire]
+Pxs=112,640,112,680
+
+[Comp]
+Name=Sine Source
+Px=112,728
+Rot=3
+
+[Attr]
+ON=-31,-26,PART
+V=V12
+Style=8192
+
+[Attr]
+ON=-50,-40,MODEL
+V=20MHZ
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=112,728,112,792
+
+[Wire]
+Pxs=112,792,200,792
+
+[Comp]
+Name=Ground
+Px=112,792
+Rot=7
+
+[Comp]
+Name=Ground
+Px=568,520
+Rot=7
+
+[Comp]
+Name=Resistor
+Px=808,624
+Rot=3
+COff=8,784,599,-36,-37
+
+[Attr]
+ON=-24,-25,PART
+V=R21
+Style=8192
+
+[Attr]
+ON=16,-31,RESISTANCE
+V=36.4k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=992,568
+Rot=3
+COff=8,968,543,6,-19
+
+[Attr]
+ON=-24,-25,PART
+V=R22
+Style=8192
+
+[Attr]
+ON=-23,-9,RESISTANCE
+V=5k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Inductor
+Px=936,520
+Rot=7
+COff=8,903,529,-15,-4
+
+[Attr]
+ON=-33,9,PART
+V=L5
+Style=8192
+
+[Attr]
+ON=0,0,INDUCTANCE
+V=120u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=1048,568
+Rot=3
+COff=8,1062,534,-1,-19
+
+[Attr]
+ON=14,-34,PART
+V=C17
+Style=8192
+
+[Attr]
+ON=7,-17,CAPACITANCE
+V=202p
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Battery
+Px=1176,520
+Rot=5
+
+[Attr]
+ON=10,-27,PART
+V=V13
+Style=8192
+
+[Attr]
+ON=10,-6,VALUE
+V=6
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=808,472,808,576
+
+[Wire]
+Pxs=808,472,992,472
+
+[Wire]
+Pxs=936,504,936,520
+
+[Wire]
+Pxs=936,504,992,504
+
+[Wire]
+Pxs=992,504,992,520
+
+[Wire]
+Pxs=992,504,1048,504
+
+[Wire]
+Pxs=1048,504,1048,520
+
+[Wire]
+Pxs=992,472,992,504
+
+[Wire]
+Pxs=992,472,1176,472
+
+[Wire]
+Pxs=936,568,936,584
+
+[Wire]
+Pxs=936,584,992,584
+
+[Wire]
+Pxs=1048,568,1048,584
+
+[Wire]
+Pxs=992,568,992,584
+
+[Wire]
+Pxs=992,584,1048,584
+
+[Wire]
+Pxs=992,584,992,616
+
+[Comp]
+Name=Capacitor
+Px=1040,616
+COff=8,1056,628,7,-39
+
+[Attr]
+ON=16,12,PART
+V=C18
+Style=8192
+
+[Attr]
+ON=0,0,CAPACITANCE
+V=1u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=992,616,1040,616
+
+[Wire]
+Pxs=1088,616,1176,616
+
+[Wire]
+Pxs=1176,616,1176,680
+
+[Comp]
+Name=Resistor
+Px=1176,728
+Rot=3
+
+[Attr]
+ON=-24,-25,PART
+V=R23
+Style=8192
+
+[Attr]
+ON=0,0,RESISTANCE
+V=10k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=NPN
+Px=968,640
+COff=8,968,640,-46,-18
+COff=8,992,616,4,-17
+COff=8,992,664,7,-22
+
+[Attr]
+ON=37,-17,PART
+V=Q5
+Style=8192
+
+[Attr]
+ON=37,-3,MODEL
+V=2N706
+
+[Attr]
+ON=37,25,PACKAGE
+V=TO-18
+
+[Wire]
+Pxs=992,664,992,688
+
+[Wire]
+Pxs=992,688,1016,688
+
+[Comp]
+Name=Capacitor
+Px=1016,688
+
+[Attr]
+ON=16,12,PART
+V=C19
+Style=8192
+
+[Attr]
+ON=0,0,CAPACITANCE
+V=1u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Sine Source
+Px=1072,760
+Rot=3
+
+[Attr]
+ON=-31,-26,PART
+V=V14
+Style=8192
+
+[Attr]
+ON=-50,-40,MODEL
+V=D1
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1064,688,1072,688
+
+[Wire]
+Pxs=1072,688,1072,712
+
+[Wire]
+Pxs=1072,760,1072,792
+
+[Wire]
+Pxs=1072,792,1176,792
+
+[Wire]
+Pxs=1176,728,1176,792
+
+[Comp]
+Name=Resistor
+Px=992,736
+Rot=3
+COff=8,968,711,-24,0
+
+[Attr]
+ON=-24,-25,PART
+V=R24
+Style=8192
+
+[Attr]
+ON=0,0,RESISTANCE
+V=250
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=992,736,992,792
+
+[Wire]
+Pxs=992,792,1072,792
+
+[Wire]
+Pxs=808,640,968,640
+
+[Wire]
+Pxs=808,624,808,640
+
+[Wire]
+Pxs=808,640,808,688
+
+[Comp]
+Name=Resistor
+Px=808,736
+Rot=3
+COff=8,784,711,-26,-28
+
+[Attr]
+ON=-24,-25,PART
+V=R25
+Style=8192
+
+[Attr]
+ON=0,0,RESISTANCE
+V=51k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=808,736,808,792
+
+[Wire]
+Pxs=808,792,992,792
+
+[Comp]
+Name=Capacitor
+Px=720,640
+
+[Attr]
+ON=16,12,PART
+V=C20
+Style=8192
+
+[Attr]
+ON=0,0,CAPACITANCE
+V=1u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=768,640,808,640
+
+[Wire]
+Pxs=720,640,720,680
+
+[Comp]
+Name=Sine Source
+Px=720,728
+Rot=3
+
+[Attr]
+ON=-31,-26,PART
+V=V15
+Style=8192
+
+[Attr]
+ON=-50,-40,MODEL
+V=20MHZ
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=720,728,720,792
+
+[Wire]
+Pxs=720,792,808,792
+
+[Comp]
+Name=Ground
+Px=720,792
+Rot=7
+
+[Comp]
+Name=Ground
+Px=1176,520
+Rot=7
+
+[Grid Text]
+Text="ПЧ"
+Px=496,216
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Гетеродин"
+Px=408,448
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="ПЧ"
+Px=1104,208
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Гетеродин"
+Px=1016,440
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="ПЧ"
+Px=1672,208
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Гетеродин"
+Px=1584,440
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="ПЧ"
+Px=496,592
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Гетеродин"
+Px=408,824
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="ПЧ"
+Px=1104,592
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Гетеродин"
+Px=1016,824
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Schematic]
+CurrentSection 0=0
+CurrentSection 1=0
+CurrentSection 2=0
+CurrentSection 3=0
+Splitter.xs=0
+Splitter.ys=0
+TextQuad=4099
+Scale=2
+GridUser=10
+ShapeGroups="Main","Euro","Polarity","Main1","Electrolytic","GroundArrow","DeMorgan","Main11"
+CalcRMS=False
+CalcAVG=False
+CalcPeak=False
+CalcVoltage=True
+DisplayMeasure=Last
+ShareScales=True
+
+[Tools]
+Pos=Top
+FILESAVEASOLD=No
+BOM=No
+FILEPCB=No
+PROBE=Yes
+SELECT=Yes
+PAN=Yes
+COMP=Yes
+TEXT=Yes
+WIRE=Yes
+WIRED=Yes
+BUS=Yes
+GRAPHIC=Yes
+FLOWCHART=Yes
+LINE=No
+ELLIPSE=No
+RECT=No
+DIAM=No
+ARC=No
+PIE=No
+TRIANGLE=No
+STAR=No
+LEFTBRK=No
+RIGHTBRK=No
+BOTHBRK=No
+META=Yes
+PARALLELOGRAM=No
+FC_PROCESS=No
+FC_ALT_PROCESS=No
+FC_DECISION=No
+FC_DATA=No
+FC_PREDEFPROCESS=No
+FC_INTERNALSTORAGE=No
+FC_DOCUMENT=No
+FC_MULTIDOCUMENT=No
+FC_TERMINATOR=No
+FC_PREPARATION=No
+FC_MANUALINPUT=No
+FC_MANUALOPERATION=No
+FC_CONNECTOR=No
+FC_OFFPAGECONNECTOR=No
+FC_PUNCHCARD=No
+FC_PUNCHEDTAPE=No
+FC_SUMMING_JUNCTION=No
+FC_OR=No
+FC_COLLATE=No
+FC_SORT=No
+FC_EXTRACT=No
+FC_MERGE=No
+FC_STORED_DATA=No
+FC_DELAY=No
+FC_SAS=No
+FC_MAGNETIC_DISK=No
+FC_DAS=No
+FC_DISPLAY=No
+SPREAD_SHEET=Yes
+POLYCLOS=No
+POLYOPEN=No
+FLAG=Yes
+INFO=Yes
+HELP=Yes
+HELP_SPICE=No
+LINK=Yes
+CHECK=Yes
+REGION_ENABLE=Yes
+TITLE_BLOCK=Yes
+DIGTRC=No
+DIGTRC2=No
+BUILD_COMMAND=Yes
+DIGALL=No
+GRIDTEXT=Yes
+COMPTEXT=Yes
+NODE=Yes
+MEASURED=Yes
+NODEV=Yes
+CURRENT=Yes
+POWER=Yes
+CONDITIN=Yes
+PIN=Yes
+CONNWARN=Yes
+CROSS=Yes
+GRID=Yes
+BORDER=Yes
+BORDERONE=Yes
+TITLE=Yes
+RUBBER=Yes
+PROPERTY=Yes
+STEP=Yes
+MIRROR=Yes
+ROTATE=Yes
+FLIPY=Yes
+FLIPX=Yes
+CIR_MAKEMACRO=No
+CLEARCUTWIRE=No
+CLIPBOARDCIRPAGE2BMM=No
+FINDCOMP=Yes
+FIND=Yes
+REPEAT=No
+REPLACE=No
+MODEL=Yes
+CIR2CKT=Yes
+ATTDISP=Yes
+ENABLE=Yes
+DISABLE=Yes
+ENABLE_WITH=Yes
+TOFRONT=Yes
+TOBACK=Yes
+SELNEXT=Yes
+PAGEADD=Yes
+PAGEADDTEXT=No
+ADDSECTION=No
+PAGEDEL=Yes
+ZOOMIN=Yes
+ZOOMOUT=Yes
+AUTOSCALECIR=Yes
+GOTOFLAG=Yes
+UPLEVEL=Yes
+COLOR=Yes
+FONT=Yes
+STYLE=Yes
+DM_LAST=No
+DM_RMS=No
+DM_AVG=No
+DM_PEAK=No
+GRID_NONE=No
+GRID_NORMAL=No
+GRID_BOLD_5=No
+GRID_BOLD_6=No
+GRID_BOLD_USER=No
+GRAPH_PAPER=No
+SPLITCIRTEXTH=No
+SPLITCIRTEXTV=No
+SPACE_SPLITTERS_EVENLY=No
+NORMALCIR=No
+RENAMEDEFINE=No
+RENAMECMP=No
+ATTALIGN=No
+RESETNODEPOS=No
+FIT2STANDARD=No
+NODESNAP=No
+MOVETEXT=No
+TEXTINC=No
+TOGGLETEXT=No
+TOGGLEMODE=No
+TOLERANCE=No
+ALIGNAB=No
+ALIGNLEFT=Yes
+ALIGNCENTER=Yes
+ALIGNRIGHT=Yes
+ALIGNTOP=Yes
+ALIGNMIDDLES=Yes
+ALIGNBOTTOM=Yes
+
+[Section]
+Index=0
+Name="Zadanie_1"
+Type=Main
+Enable=True
+CurrentPage 0=0
+CurrentPage 1=0
+CurrentPage 2=0
+CurrentPage 3=0
+TabSize 0=425
+TabSize 1=425
+TabSize 2=425
+TabSize 3=425
+
+[Page]
+Index=0
+Section=0
+Print=True
+Enable=True
+Name=Main
+PrinterScale=1
+Scale 0=1
+Scale 1=1
+Scale 2=1
+Scale 3=2
+Px=701,514
+WinBackGround Color=#FFFFFF
+Select Color=#FF0000
+Anchor Color=#000000
+Select Box Color=#000080
+Grid Text Color=Height=-12,FStyle=0,Color=#0000FF,Name=Verdana
+Grid Text RTF=False
+Grid Text Angle=0
+Grid Text GridSnap=True
+Grid Text PinIt=False
+Grid Text JustifyH=Left
+Grid Text JustifyV=Bottom
+Grid GradientColor2=None
+Grid OutlineThickness=1
+Grid OutlineColor=None
+Component Color=#0000FF
+Attribute Text=Height=-12,FStyle=0,Color=#008000,Name=Verdana
+Wire Color=#008000
+Bus Color=#008000
+Pin Connection=Height=-10,FStyle=0,Color=#FF0000,Name=Arial
+Pin Marker Color=#008000
+Node Number=Height=-11,FStyle=0,Color=#FF00FF,Name=Arial
+Node Voltage Color=Height=-11,FStyle=0,Color=#000000,Name=Arial
+Dynamic AC Voltage Color=#E4E4E4
+Text Banner Text=Height=-15,FStyle=0,Color=#800000,Name=Arial
+Title Block Background=#C0C0C0
+Current=Height=-11,FStyle=0,Color=#0000FF,Name=Arial
+Power/Condition=Height=-11,FStyle=0,Color=#FF0000,Name=Arial
+Digital Path Color=#FF0000
+Title Block Border=#000000
+Disabled	Color=#C0C0C0
+Search Color=#FFFF00
+Grid Color=#000000
+Graph Paper=#E4E4E4
+Digital 0 Color=#000000
+Digital R Color=#FFFF00
+Digital F Color=#FFFF00
+Digital 1 Color=#FF0000
+Digital X Color=#C0C0C0
+Digital Z Color=#808080
+Block Select Color=#51F998
+
+[Page]
+Index=1
+Section=0
+Type=Text
+Print=False
+Enable=True
+Name=Text
+Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Comment Color=#008000
+WinBackGround Color=#FFFFFF
+Disabled	Color=#C0C0C0
+KeyWord Color=#0000FF
+Error	Color=#FF0000
+Search Color=#FFFF00
+
+[Page]
+Index=2
+Section=0
+Type=Text
+Print=False
+Enable=True
+Name=Models
+SB 0=29,46
+Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Comment Color=#008000
+WinBackGround Color=#FFFFFF
+Disabled	Color=#C0C0C0
+KeyWord Color=#0000FF
+Error	Color=#FF0000
+Search Color=#FFFF00
+
+[Page]
+Index=3
+Section=0
+Type=Info
+Print=False
+Enable=True
+Name=Info
+Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Comment Color=#008000
+WinBackGround Color=#FFFFFF
+Disabled	Color=#C0C0C0
+KeyWord Color=#0000FF
+Error	Color=#FF0000
+Search Color=#FFFF00
+
+[Text Area]
+Section=0
+Page=1
+
+[Text Area]
+Section=0
+Page=2
+Text=* Schematic File
+Text=*
+Text=* Syntax:
+Text=* .MODEL <model name> [AKO:<reference model name>] <ModelType>
+Text=* +([<parameter name>=<value>][LOT[/#][/GAUSS|/UNIFORM|/WCASE]=[<tol>[%]] |[-<low>%,<high>%]][DEV[/#][/GAUSS|/UNIFORM|/WCASE]=[<tol>[%]]...)
+Text=* ModelType must be one of OPA,D,NPN,NMOS,NJF,PUL,SIN,TRN,CORE,GASFET,VSWITCH,ISWITCH,CAP,IND,RES,PNP,PMOS,PJF,DOUTPUT,DINPUT,UADC,UDAC,UGATE,UTGATE,UEFF,UGFF,UDLY,UPLD,UROM,URAM,UBGT,UIO,LPNP,NIGBT,I,V
+Text=*
+Text=*Examples:
+Text=* .MODEL 2N2222A NPN(BF=150 IS=1E-14)
+Text=* .model M1 NMOS(KP=2.5E-5 VTO=1.345 CGDO=14.67p CGBO=4.566p)
+Text=* .MODEL DK D(IS=1E-18)
+Text=* .model 2N2222A AKO:2N2222 NPN (BF=55 ISE=10F)
+Text=* .Model BJT1 NPN (RE=12 LOT/1/GAUSS=30% DEV/2/UNIFORM=2%)
+Text=*
+Text=* A .cir file is typically found in the data directory
+Text=*
+Text=*** From file C:\MC12\library\DIODESINC_BJT.LIB
+Text=.MODEL 2DD1766Q NPN (BF=201 BR=4.00 CJC=41.4P CJE=218P EG=1.12 IKF=2.97
+Text=+ IKR=4.50 IS=6.65F ISE=13.0F MJC=0.300 MJE=0.500 NE=2.00 NF=1.00 NR=1.00
+Text=+ RB=0.275 RC=27.5M RE=68.7M TF=538P TR=101N VAF=102 VAR=20.0 VJC=0.300
+Text=+ VJE=1.10 XTB=1.5)
+Text=*** From file C:\MC12\library\DIODESINC_BJT.LIB
+Text=.MODEL 2DD2656 NPN (BF=550 BR=110 CJC=18E-12 CJE=97.7E-12 IKF=0.99 IKR=0.63
+Text=+ IS=2.61E-13 ISC=2.25E-12 ISE=7.17E-14 MJC=0.371 NC=1.45 NE=1.4148 RB=0.093
+Text=+ RC=0.083 RE=0.073 TF=0.78E-9 TR=9E-9 VAF=84 VAR=51 VJC=0.435)
+Text=*** From file C:\MC12\library\UTILITY.LBR
+Text=*** 1MHz Sinusoidal Source
+Text=.MODEL 1MHZ SIN (A=5m)
+Text=.MODEL 20MHZ SIN (A=1m F=20MEG)
+Text=.MODEL 21MHZ SIN (A=10m F=21MEG)
+Text=*** From file D:\microcap\library\MSBJT.LBR
+Text=*** NPN Switching transistors
+Text=.MODEL 2N708 NPN (BF=86.8226 BR=1m CJC=27.4829p CJE=2p IKF=727.628m IKR=10m
+Text=+ IS=9.92443f ISC=100p ISE=958.901f ITF=10.076m MJC=558.067m MJE=500m
+Text=+ NE=1.80874 NF=1.09115 RC=2 RE=2 TF=677.015p TR=85.5963u VAF=100 VJC=700m
+Text=+ VTF=10 XTF=500.014m)
+Text=*** From file D:\microcap\library\MSBJT.LBR
+Text=*** NPN Switching transistors
+Text=.MODEL 2N706 NPN (BF=47.9243 BR=1m CJC=27.4829p CJE=2p IKF=752.796m IKR=10m
+Text=+ IS=10.1652f ISC=100p ISE=977.355f ITF=10.0415m MJC=558.067m MJE=500m
+Text=+ NE=1.94587 NF=1.23211 RC=2 RE=1.99985 TF=671.676p TR=102.03u VAF=100 VJC=700m
+Text=+ VTF=10 XTF=500.01m)
+Text=.MODEL A SIN (A=5m F=21MEG)
+Text=.MODEL B SIN (A=10m F=21MEG)
+Text=.MODEL C SIN (A=15m F=21MEG)
+Text=.MODEL D SIN (A=20m F=21MEG)
+Text=.MODEL D1 SIN (A=25m F=21MEG)
+
+[InfoPage]
+InfoPage=True
+Warnings=True
+System=True
+Defines=True
+Array=True
+Model=True
+Measure=True
+MacroSubckt=True
+NotUsed=True
+ComponentCounts=True
+VariablizePaths=False
+DontShowPaths=False
+SimulationLog=True
+
+[Transient]
+WinID=1
+Window Placement=2,3, -1,-1, -8,-31, 104,104,1279,469
+Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
+WinBackGround Color=#FFFFFF
+Select Color=#FF0000
+Anchor Color=#000000
+Select Box Color=#000080
+Title
+AutoTitle=Yes
+Grid Color=#808080
+Grid Weight=1
+Grid Pattern=Dot6
+Tracker Foreground=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Tracker Background=#FFFF00
+Baseline color=#0000FF
+BaseLine Weight=1
+CurveFit color=#FF0000
+CurveFit Weight=2
+CurveFit Pattern=Dash
+Static Grids=False
+PlusMark=False
+MinorLog25=Off
+LabelMinor=Off
+DataPoints=False
+Token=False
+Ruler=False
+XAxisGrids=True
+YAxisGrids=True
+MinorLogGrids=True
+BaseLine=False
+AlignZ=True
+Align Cursors=True
+TagFormatX=3
+TagFormatY=3
+FormulaFormat=2
+EndMode=SCALE
+Graph Background=#FFFFFF
+Tracker Intercept=False
+Tracker Mouse=True
+Tracker Cursor=True
+Tracker Cursor BranchInfo=False
+Horizontal Cursor=False
+Same Y Scales=Yes
+Enable X Scaling=True
+Enable Y Scaling=True
+Keep X Scales The Same=True
+Number of Grids X=5
+Number of Grids Y=5
+Cursor Select Color Primary=#C0C0C0
+Cursor Select Color Secondary=#FF0000
+Data Point Labels Color Fore=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Data Point Labels Color Back=#FFFF00
+OperPoint=True
+OperPointOnly=False
+AutoScaleRanges=False
+FixedTimeStep=False
+DoPSS=False
+PSS_Periods="1"
+PSS_Iterations="5"
+PSS_Error="1u"
+PSS_ShowPlots=True
+FFT_Min="20u"
+FFT_NPts="8192"
+FFT_IncludeDCHarmonic=False
+FFT_AutoScale_Harmonics="10"
+PrinterAutoTile=No
+PrinterBlackBorder=No
+MonMaxShow=5
+MonPageWidth=66
+MonPlotWidth=21
+MonExprXWidth=142
+MonExprYWidth=367
+MonRangeXWidth=90
+MonRangeYWidth=90
+AnimateWait=None
+AnimateWaitTime=500
+AnimatePressAfter=0
+Save_For_Future=No
+Reduce_Display=1
+Reduce_Save=1
+Reduce_ThrowDataOut=0
+Num Out Header Left
+Num Out Header Center="$MC\n$user\n$company\n$Analysis of $name\n$date $time"
+Num Out Header Right
+Num Out Delimiter=32
+Num Out Write=True
+Num Out Write Main Header=True
+Num Out Write Limits=True
+Num Out Write Branch Header=True
+Num Out Write Models=False
+Num Out Write Zero Models=True
+Num Out Write Undefined Models=True
+Num Out Write Operating Point=True
+Num Out Write Measurement Values=True
+Num Out Write Tolerance Detail=True
+Num Out Write Values=True
+Num Out Write Waveform Header=True
+Num Out Allow Dup Y Expr=False
+Num Out Low="TSTART"
+Num Out High="TMAX"
+Num Out Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Num Out Format=3
+Num Out HideNonSelected=False
+Num Out UseActualDataPoints=False
+AutoSaveWave=False
+Wave Format=16E
+State Variables Format=5E
+Print Individual Pages=False
+
+[Tools]
+Pos=Top
+SELECT=Yes
+PAN=Yes
+GRAPHIC=Yes
+LINE=No
+ELLIPSE=No
+RECT=No
+DIAM=No
+ARC=No
+PIE=No
+TRIANGLE=No
+STAR=No
+LEFTBRK=No
+RIGHTBRK=No
+BOTHBRK=No
+META=No
+PARALLELOGRAM=No
+POLYCLOS=No
+POLYOPEN=No
+SCALE=Yes
+CURSOR=Yes
+MEASUREH=Yes
+MEASUREV=Yes
+TAG=Yes
+PTAG=Yes
+TEXT=Yes
+PROPERTY=Yes
+START=Yes
+STOP=Yes
+PAUSE=Yes
+RESUME=No
+DATAPTS=Yes
+TOKENS=Yes
+RULER=Yes
+PLUS=Yes
+XAXIS=Yes
+YAXIS=Yes
+MINORLOG=Yes
+LOG25=Yes
+BASELINE=Yes
+HORIZCUR=Yes
+GOTOX=Yes
+GOTOY=Yes
+GOTOPERF=Yes
+GOTOBRNC=Yes
+CLEAR_ACCUMULATED=Yes
+PDELETE_ALL_PLOTS=Yes
+NEXT=Yes
+NEXTIN=Yes
+PEAK=Yes
+VALLEY=Yes
+HIGH=Yes
+LOW=Yes
+INFLECTN=Yes
+GHIGH=Yes
+GLOW=Yes
+BOTTOM=Yes
+TOP=Yes
+WAVEFORMBUFFER=Yes
+AOUTPUT=Yes
+PKEY=Yes
+ENXSCALE=Yes
+ENYSCALE=Yes
+ZOOMIN=Yes
+ZOOMOUT=Yes
+AUTOSCALE=Yes
+RESTORESCALE=No
+COLOR=Yes
+FONT=Yes
+STYLE=Yes
+SELNEXT=No
+NORMALIZE=No
+NORMALIZE_MIN=No
+NORMALIZE_MAX=No
+ADD_TAG_LEFT=No
+ADD_TAG_RIGHT=No
+ADD_HORZ_TAG=No
+ADD_VERT_TAG=No
+ALIGN_CURSORS=No
+ALIGN_CURSORSZ=No
+CURSORTOCLIPBOARD=No
+TRACKER_CURSOR=No
+TRACKER_CURSOR_BRANCHINFO=No
+TRACKER_INTERCEPT=No
+TRACKER_MOUSE=No
+TOFRONT=Yes
+TOBACK=Yes
+SPLITCIRTEXTH=No
+SPLITCIRTEXTV=No
+SPACE_SPLITTERS_EVENLY=No
+NORMALCIR=No
+LABEL_WAVEFORM=No
+LABEL_DATA_POINTS=No
+WFB_ADD_TO_LIMITS=No
+ENVELOPE=No
+SAMEYSCALES=No
+KEEPXSCALESTHESAME=No
+CURVEFIT=No
+ADD_MARKER=No
+SHOWWATCH=No
+BP=No
+TOGGLEMODE=No
+REMOVEALLTEXT=No
+AUTOSCALEX=No
+LABELALLMINOR=No
+ALIGNLEFT=No
+ALIGNCENTER=No
+ALIGNRIGHT=No
+ALIGNTOP=No
+ALIGNMIDDLES=No
+ALIGNBOTTOM=No
+
+[APage]
+Analysis=Transient
+Name="1"
+
+[APage]
+Analysis=Transient
+Name="2"
+
+[APage]
+Analysis=Transient
+Name="3"
+
+[APage]
+Analysis=Transient
+Name="4"
+
+[APage]
+Analysis=Transient
+Name="5"
+
+[DC]
+WinID=3
+Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
+WinBackGround Color=#FFFFFF
+Select Color=#FF0000
+Anchor Color=#000000
+Select Box Color=#000080
+Title
+AutoTitle=Yes
+Grid Color=#808080
+Grid Weight=1
+Grid Pattern=Dot6
+Tracker Foreground=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Tracker Background=#FFFF00
+Baseline color=#0000FF
+BaseLine Weight=1
+CurveFit color=#FF0000
+CurveFit Weight=2
+CurveFit Pattern=Dash
+Static Grids=False
+PlusMark=False
+MinorLog25=Off
+LabelMinor=Off
+DataPoints=False
+Token=False
+Ruler=False
+XAxisGrids=True
+YAxisGrids=True
+MinorLogGrids=True
+BaseLine=False
+AlignZ=True
+Align Cursors=True
+TagFormatX=3
+TagFormatY=3
+FormulaFormat=2
+EndMode=SCALE
+Graph Background=#FFFFFF
+Tracker Intercept=False
+Tracker Mouse=True
+Tracker Cursor=True
+Tracker Cursor BranchInfo=False
+Horizontal Cursor=False
+Same Y Scales=Yes
+Enable X Scaling=True
+Enable Y Scaling=True
+Keep X Scales The Same=True
+Number of Grids X=5
+Number of Grids Y=5
+Cursor Select Color Primary=#C0C0C0
+Cursor Select Color Secondary=#FF0000
+Data Point Labels Color Fore=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Data Point Labels Color Back=#FFFF00
+AutoScaleRanges=True
+PrinterAutoTile=No
+PrinterBlackBorder=No
+AnimateWait=None
+AnimateWaitTime=500
+AnimatePressAfter=0
+Save_For_Future=No
+Reduce_Display=1
+Reduce_Save=1
+Reduce_ThrowDataOut=0
+Num Out Header Left
+Num Out Header Center="$MC\n$user\n$company\n$Analysis of $name\n$date $time"
+Num Out Header Right
+Num Out Delimiter=32
+Num Out Write=True
+Num Out Write Main Header=True
+Num Out Write Limits=True
+Num Out Write Branch Header=True
+Num Out Write Models=False
+Num Out Write Zero Models=True
+Num Out Write Undefined Models=True
+Num Out Write Measurement Values=True
+Num Out Write Tolerance Detail=True
+Num Out Write Values=True
+Num Out Write Waveform Header=True
+Num Out Allow Dup Y Expr=False
+Num Out Low="DCMIN"
+Num Out High="DCMAX"
+Num Out Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Num Out Format=3
+Num Out HideNonSelected=False
+Num Out UseActualDataPoints=False
+AutoSaveWave=False
+Wave Format=16E
+State Variables Format=5E
+Print Individual Pages=False
+
+[Tools]
+Pos=Top
+SELECT=Yes
+PAN=Yes
+GRAPHIC=Yes
+LINE=No
+ELLIPSE=No
+RECT=No
+DIAM=No
+ARC=No
+PIE=No
+TRIANGLE=No
+STAR=No
+LEFTBRK=No
+RIGHTBRK=No
+BOTHBRK=No
+META=No
+PARALLELOGRAM=No
+POLYCLOS=No
+POLYOPEN=No
+SCALE=Yes
+CURSOR=Yes
+MEASUREH=Yes
+MEASUREV=Yes
+TAG=Yes
+PTAG=Yes
+TEXT=Yes
+PROPERTY=Yes
+START=Yes
+STOP=Yes
+PAUSE=Yes
+RESUME=No
+DATAPTS=Yes
+TOKENS=Yes
+RULER=Yes
+PLUS=Yes
+XAXIS=Yes
+YAXIS=Yes
+MINORLOG=Yes
+LOG25=Yes
+BASELINE=Yes
+HORIZCUR=Yes
+GOTOX=Yes
+GOTOY=Yes
+GOTOPERF=Yes
+GOTOBRNC=Yes
+CLEAR_ACCUMULATED=Yes
+PDELETE_ALL_PLOTS=Yes
+NEXT=Yes
+NEXTIN=Yes
+PEAK=Yes
+VALLEY=Yes
+HIGH=Yes
+LOW=Yes
+INFLECTN=Yes
+GHIGH=Yes
+GLOW=Yes
+BOTTOM=Yes
+TOP=Yes
+WAVEFORMBUFFER=Yes
+AOUTPUT=Yes
+PKEY=Yes
+ENXSCALE=Yes
+ENYSCALE=Yes
+ZOOMIN=Yes
+ZOOMOUT=Yes
+AUTOSCALE=Yes
+RESTORESCALE=No
+COLOR=Yes
+FONT=Yes
+STYLE=Yes
+SELNEXT=No
+NORMALIZE=No
+NORMALIZE_MIN=No
+NORMALIZE_MAX=No
+ADD_TAG_LEFT=No
+ADD_TAG_RIGHT=No
+ADD_HORZ_TAG=No
+ADD_VERT_TAG=No
+ALIGN_CURSORS=No
+ALIGN_CURSORSZ=No
+CURSORTOCLIPBOARD=No
+TRACKER_CURSOR=No
+TRACKER_CURSOR_BRANCHINFO=No
+TRACKER_INTERCEPT=No
+TRACKER_MOUSE=No
+TOFRONT=Yes
+TOBACK=Yes
+SPLITCIRTEXTH=No
+SPLITCIRTEXTV=No
+SPACE_SPLITTERS_EVENLY=No
+NORMALCIR=No
+LABEL_WAVEFORM=No
+LABEL_DATA_POINTS=No
+WFB_ADD_TO_LIMITS=No
+ENVELOPE=No
+SAMEYSCALES=No
+KEEPXSCALESTHESAME=No
+CURVEFIT=No
+ADD_MARKER=No
+SHOWWATCH=No
+BP=No
+TOGGLEMODE=No
+REMOVEALLTEXT=No
+AUTOSCALEX=No
+LABELALLMINOR=No
+ALIGNLEFT=No
+ALIGNCENTER=No
+ALIGNRIGHT=No
+ALIGNTOP=No
+ALIGNMIDDLES=No
+ALIGNBOTTOM=No
+
+[Monte Carlo Options]
+Analysis=Transient
+Status=Off
+Zero Tolerance=False
+Eliminate Outliers=False
+Distribution=Normal
+Number of Runs=10
+Seed=0
+
+[Monte Carlo Options]
+Analysis=DC
+Status=Off
+Zero Tolerance=False
+Eliminate Outliers=False
+Distribution=Normal
+Number of Runs=10
+Seed=0
+
+[FFT]
+Analysis=Transient
+WinID=7
+Window Placement=2,3, -1,-1, -8,-31, 104,104,1279,469
+Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
+WinBackGround Color=#FFFFFF
+Select Color=#FF0000
+Anchor Color=#000000
+Select Box Color=#000080
+Title=Harm(v(4))
+AutoTitle=Yes
+ShowWin=False
+Grid Color=#808080
+Grid Weight=1
+Grid Pattern=Dot6
+Tracker Foreground=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Tracker Background=#FFFF00
+Baseline color=#0000FF
+BaseLine Weight=1
+CurveFit color=#FF0000
+CurveFit Weight=2
+CurveFit Pattern=Dash
+Static Grids=False
+PlusMark=False
+MinorLog25=Off
+LabelMinor=Off
+DataPoints=False
+Token=False
+Ruler=False
+XAxisGrids=True
+YAxisGrids=True
+MinorLogGrids=True
+BaseLine=False
+AlignZ=True
+Align Cursors=True
+TagFormatX=3
+TagFormatY=3
+FormulaFormat=2
+EndMode=SCALE
+Graph Background=#FFFFFF
+Tracker Intercept=False
+Tracker Mouse=True
+Tracker Cursor=True
+Tracker Cursor BranchInfo=False
+Horizontal Cursor=False
+Same Y Scales=Yes
+Enable X Scaling=True
+Enable Y Scaling=True
+Keep X Scales The Same=True
+Number of Grids X=5
+Number of Grids Y=5
+FFT_Min="20u"
+FFT_NPts="8192"
+FFT_IncludeDCHarmonic=False
+FFT_AutoScale_Harmonics="10"
+FFT_Base_Line="-240"
+FFT_Phase_Limit="-240"
+FFT_PlotNegativeFrequencies=False
+Fourier_Method=FFT
+Num Out Write Main Header=True
+Num Out Write Limits=True
+Num Out Write Branch Header=True
+Num Out Write Waveform Header=True
+Num Out HideNonSelected=False
+Num Out Allow Dup Y Expr=False
+
+[Tools]
+Pos=Top
+SELECT=Yes
+PAN=Yes
+GRAPHIC=Yes
+LINE=No
+ELLIPSE=No
+RECT=No
+DIAM=No
+ARC=No
+PIE=No
+TRIANGLE=No
+STAR=No
+LEFTBRK=No
+RIGHTBRK=No
+BOTHBRK=No
+META=No
+PARALLELOGRAM=No
+POLYCLOS=No
+POLYOPEN=No
+SCALE=Yes
+CURSOR=Yes
+MEASUREH=Yes
+MEASUREV=Yes
+TAG=Yes
+PTAG=Yes
+TEXT=Yes
+PROPERTY=Yes
+DATAPTS=Yes
+TOKENS=Yes
+RULER=Yes
+PLUS=Yes
+XAXIS=Yes
+YAXIS=Yes
+MINORLOG=Yes
+LOG25=Yes
+BASELINE=Yes
+HORIZCUR=Yes
+GOTOX=Yes
+GOTOY=Yes
+GOTOPERF=Yes
+GOTOBRNC=Yes
+NEXT=Yes
+NEXTIN=Yes
+PEAK=Yes
+VALLEY=Yes
+HIGH=Yes
+LOW=Yes
+INFLECTN=Yes
+GHIGH=Yes
+GLOW=Yes
+ENXSCALE=Yes
+ENYSCALE=Yes
+ZOOMIN=Yes
+ZOOMOUT=Yes
+AUTOSCALE=Yes
+RESTORESCALE=No
+COLOR=Yes
+FONT=Yes
+STYLE=Yes
+SELNEXT=No
+NORMALIZE=No
+NORMALIZE_MIN=No
+NORMALIZE_MAX=No
+ADD_TAG_LEFT=No
+ADD_TAG_RIGHT=No
+ADD_HORZ_TAG=No
+ADD_VERT_TAG=No
+ALIGN_CURSORS=No
+ALIGN_CURSORSZ=No
+CURSORTOCLIPBOARD=No
+TRACKER_CURSOR=No
+TRACKER_CURSOR_BRANCHINFO=No
+TRACKER_INTERCEPT=No
+TRACKER_MOUSE=No
+TOFRONT=Yes
+TOBACK=Yes
+SPLITCIRTEXTH=No
+SPLITCIRTEXTV=No
+SPACE_SPLITTERS_EVENLY=No
+NORMALCIR=No
+LABEL_WAVEFORM=No
+LABEL_DATA_POINTS=No
+SAMEYSCALES=No
+KEEPXSCALESTHESAME=No
+CURVEFIT=No
+ADD_MARKER=No
+TOGGLEMODE=No
+REMOVEALLTEXT=No
+AUTOSCALEX=No
+LABELALLMINOR=No
+ALIGNLEFT=No
+ALIGNCENTER=No
+ALIGNRIGHT=No
+ALIGNTOP=No
+ALIGNMIDDLES=No
+ALIGNBOTTOM=No
+
+[AObject]
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=1
+Pos=41000000.000000007,9.4193435526659927e-005,34357192.494788051,0.0033210332103321034
+Font=Height=-29,FStyle=0,Color=#0000FF,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=1
+Pos=42000000.000000007,0.00023002360091179777,42863099.374565668,0.0051199261992619927
+Font=Height=-29,FStyle=0,Color=#0000FF,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=1
+Pos=20000000.000000004,0.0032723324031896381,14287699.79152189,0.0089944649446494461
+Font=Height=-29,FStyle=0,Color=#0000FF,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=1
+Pos=21000000.000000004,0.015568268773536315,23905489.923558027,0.020341328413284131
+Font=Height=-29,FStyle=0,Color=#0000FF,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=1
+Pos=1000000.0000000001,0.015951197194885809,1149409.3120222378,0.021863468634686346
+Font=Height=-29,FStyle=0,Color=#0000FF,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=1
+Pos=1000000.0000000001,0.075109191653013857,1113273.1063238361,0.080295202952029521
+Font=Height=-29,FStyle=0,Color=#0000FF,Name=Arial
+Format=3
+FormatY=3
+
+[APage]
+
+[FFT WaveForm]
+Expression=v(4)
+What=Mag
+RefFreq
+Window
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3
+NOFmtY=3
+CS=Popsicle
+Line Color=#0000FF
+Text Color=#0000FF
+Rainbow=False
+PlotNum=1
+AliasID=1
+Enable=0
+Auto Scale X=No
+Auto Scale Y=No
+Range Min X=-10
+Range Min Y=-10
+Range Max X=10
+Range Max Y=10
+Range Grid X=1000000
+Range Grid Y=0.0050000000000000001
+Range Bold X=0
+Range Bold Y=0
+LinearX=True
+LinearY=True
+
+[FFT]
+Analysis=Transient
+WinID=8
+Window Placement=2,3, -1,-1, -8,-31, 0,0,1175,365
+Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
+WinBackGround Color=#FFFFFF
+Select Color=#FF0000
+Anchor Color=#000000
+Select Box Color=#000080
+Title=Harm(v(4))
+AutoTitle=Yes
+ShowWin=False
+Grid Color=#808080
+Grid Weight=1
+Grid Pattern=Dot6
+Tracker Foreground=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Tracker Background=#FFFF00
+Baseline color=#0000FF
+BaseLine Weight=1
+CurveFit color=#FF0000
+CurveFit Weight=2
+CurveFit Pattern=Dash
+Static Grids=False
+PlusMark=False
+MinorLog25=Off
+LabelMinor=Off
+DataPoints=False
+Token=False
+Ruler=False
+XAxisGrids=True
+YAxisGrids=True
+MinorLogGrids=True
+BaseLine=False
+AlignZ=True
+Align Cursors=True
+TagFormatX=3
+TagFormatY=3
+FormulaFormat=2
+EndMode=SCALE
+Graph Background=#FFFFFF
+Tracker Intercept=False
+Tracker Mouse=True
+Tracker Cursor=True
+Tracker Cursor BranchInfo=False
+Horizontal Cursor=False
+Same Y Scales=Yes
+Enable X Scaling=True
+Enable Y Scaling=True
+Keep X Scales The Same=True
+Number of Grids X=5
+Number of Grids Y=5
+FFT_Min="20u"
+FFT_NPts="8192"
+FFT_IncludeDCHarmonic=False
+FFT_AutoScale_Harmonics="10"
+FFT_Base_Line="-240"
+FFT_Phase_Limit="-240"
+FFT_PlotNegativeFrequencies=False
+Fourier_Method=FFT
+Num Out Write Main Header=True
+Num Out Write Limits=True
+Num Out Write Branch Header=True
+Num Out Write Waveform Header=True
+Num Out HideNonSelected=False
+Num Out Allow Dup Y Expr=False
+
+[Tools]
+Pos=Top
+SELECT=Yes
+PAN=Yes
+GRAPHIC=Yes
+LINE=No
+ELLIPSE=No
+RECT=No
+DIAM=No
+ARC=No
+PIE=No
+TRIANGLE=No
+STAR=No
+LEFTBRK=No
+RIGHTBRK=No
+BOTHBRK=No
+META=No
+PARALLELOGRAM=No
+POLYCLOS=No
+POLYOPEN=No
+SCALE=Yes
+CURSOR=Yes
+MEASUREH=Yes
+MEASUREV=Yes
+TAG=Yes
+PTAG=Yes
+TEXT=Yes
+PROPERTY=Yes
+DATAPTS=Yes
+TOKENS=Yes
+RULER=Yes
+PLUS=Yes
+XAXIS=Yes
+YAXIS=Yes
+MINORLOG=Yes
+LOG25=Yes
+BASELINE=Yes
+HORIZCUR=Yes
+GOTOX=Yes
+GOTOY=Yes
+GOTOPERF=Yes
+GOTOBRNC=Yes
+NEXT=Yes
+NEXTIN=Yes
+PEAK=Yes
+VALLEY=Yes
+HIGH=Yes
+LOW=Yes
+INFLECTN=Yes
+GHIGH=Yes
+GLOW=Yes
+ENXSCALE=Yes
+ENYSCALE=Yes
+ZOOMIN=Yes
+ZOOMOUT=Yes
+AUTOSCALE=Yes
+RESTORESCALE=No
+COLOR=Yes
+FONT=Yes
+STYLE=Yes
+SELNEXT=No
+NORMALIZE=No
+NORMALIZE_MIN=No
+NORMALIZE_MAX=No
+ADD_TAG_LEFT=No
+ADD_TAG_RIGHT=No
+ADD_HORZ_TAG=No
+ADD_VERT_TAG=No
+ALIGN_CURSORS=No
+ALIGN_CURSORSZ=No
+CURSORTOCLIPBOARD=No
+TRACKER_CURSOR=No
+TRACKER_CURSOR_BRANCHINFO=No
+TRACKER_INTERCEPT=No
+TRACKER_MOUSE=No
+TOFRONT=Yes
+TOBACK=Yes
+SPLITCIRTEXTH=No
+SPLITCIRTEXTV=No
+SPACE_SPLITTERS_EVENLY=No
+NORMALCIR=No
+LABEL_WAVEFORM=No
+LABEL_DATA_POINTS=No
+SAMEYSCALES=No
+KEEPXSCALESTHESAME=No
+CURVEFIT=No
+ADD_MARKER=No
+TOGGLEMODE=No
+REMOVEALLTEXT=No
+AUTOSCALEX=No
+LABELALLMINOR=No
+ALIGNLEFT=No
+ALIGNCENTER=No
+ALIGNRIGHT=No
+ALIGNTOP=No
+ALIGNMIDDLES=No
+ALIGNBOTTOM=No
+
+[APage]
+
+[FFT WaveForm]
+Expression=v(4)
+What=Mag
+RefFreq
+Window
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3
+NOFmtY=3
+CS=Normal
+Line Color=#0000FF
+Text Color=#0000FF
+Rainbow=False
+LWdth=3
+PlotNum=1
+AliasID=1
+Enable=0
+Auto Scale X=Yes
+Auto Scale Y=Yes
+Range Min X=0
+Range Min Y=5.6234132519034798e-007
+Range Max X=125000.00000000001
+Range Max Y=9.9999999999999788e-006
+Range Grid X=12500.000000000002
+Range Grid Y=5
+Range Bold X=0
+Range Bold Y=0
+LinearX=True
+LinearY=False
+
+[FFT]
+Analysis=Transient
+WinID=9
+Window Placement=2,3, -1,-1, -8,-31, 26,26,1201,391
+Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
+WinBackGround Color=#FFFFFF
+Select Color=#FF0000
+Anchor Color=#000000
+Select Box Color=#000080
+Title=Harm(v(4))
+AutoTitle=Yes
+ShowWin=False
+Grid Color=#808080
+Grid Weight=1
+Grid Pattern=Dot6
+Tracker Foreground=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Tracker Background=#FFFF00
+Baseline color=#0000FF
+BaseLine Weight=1
+CurveFit color=#FF0000
+CurveFit Weight=2
+CurveFit Pattern=Dash
+Static Grids=False
+PlusMark=False
+MinorLog25=Off
+LabelMinor=Off
+DataPoints=False
+Token=False
+Ruler=False
+XAxisGrids=True
+YAxisGrids=True
+MinorLogGrids=True
+BaseLine=False
+AlignZ=True
+Align Cursors=True
+TagFormatX=3
+TagFormatY=3
+FormulaFormat=2
+EndMode=SCALE
+Graph Background=#FFFFFF
+Tracker Intercept=False
+Tracker Mouse=True
+Tracker Cursor=True
+Tracker Cursor BranchInfo=False
+Horizontal Cursor=False
+Same Y Scales=Yes
+Enable X Scaling=True
+Enable Y Scaling=True
+Keep X Scales The Same=True
+Number of Grids X=5
+Number of Grids Y=5
+FFT_Min="20u"
+FFT_NPts="8192"
+FFT_IncludeDCHarmonic=False
+FFT_AutoScale_Harmonics="10"
+FFT_Base_Line="-240"
+FFT_Phase_Limit="-240"
+FFT_PlotNegativeFrequencies=False
+Fourier_Method=FFT
+Num Out Write Main Header=True
+Num Out Write Limits=True
+Num Out Write Branch Header=True
+Num Out Write Waveform Header=True
+Num Out HideNonSelected=False
+Num Out Allow Dup Y Expr=False
+
+[Tools]
+Pos=Top
+SELECT=Yes
+PAN=Yes
+GRAPHIC=Yes
+LINE=No
+ELLIPSE=No
+RECT=No
+DIAM=No
+ARC=No
+PIE=No
+TRIANGLE=No
+STAR=No
+LEFTBRK=No
+RIGHTBRK=No
+BOTHBRK=No
+META=No
+PARALLELOGRAM=No
+POLYCLOS=No
+POLYOPEN=No
+SCALE=Yes
+CURSOR=Yes
+MEASUREH=Yes
+MEASUREV=Yes
+TAG=Yes
+PTAG=Yes
+TEXT=Yes
+PROPERTY=Yes
+DATAPTS=Yes
+TOKENS=Yes
+RULER=Yes
+PLUS=Yes
+XAXIS=Yes
+YAXIS=Yes
+MINORLOG=Yes
+LOG25=Yes
+BASELINE=Yes
+HORIZCUR=Yes
+GOTOX=Yes
+GOTOY=Yes
+GOTOPERF=Yes
+GOTOBRNC=Yes
+NEXT=Yes
+NEXTIN=Yes
+PEAK=Yes
+VALLEY=Yes
+HIGH=Yes
+LOW=Yes
+INFLECTN=Yes
+GHIGH=Yes
+GLOW=Yes
+ENXSCALE=Yes
+ENYSCALE=Yes
+ZOOMIN=Yes
+ZOOMOUT=Yes
+AUTOSCALE=Yes
+RESTORESCALE=No
+COLOR=Yes
+FONT=Yes
+STYLE=Yes
+SELNEXT=No
+NORMALIZE=No
+NORMALIZE_MIN=No
+NORMALIZE_MAX=No
+ADD_TAG_LEFT=No
+ADD_TAG_RIGHT=No
+ADD_HORZ_TAG=No
+ADD_VERT_TAG=No
+ALIGN_CURSORS=No
+ALIGN_CURSORSZ=No
+CURSORTOCLIPBOARD=No
+TRACKER_CURSOR=No
+TRACKER_CURSOR_BRANCHINFO=No
+TRACKER_INTERCEPT=No
+TRACKER_MOUSE=No
+TOFRONT=Yes
+TOBACK=Yes
+SPLITCIRTEXTH=No
+SPLITCIRTEXTV=No
+SPACE_SPLITTERS_EVENLY=No
+NORMALCIR=No
+LABEL_WAVEFORM=No
+LABEL_DATA_POINTS=No
+SAMEYSCALES=No
+KEEPXSCALESTHESAME=No
+CURVEFIT=No
+ADD_MARKER=No
+TOGGLEMODE=No
+REMOVEALLTEXT=No
+AUTOSCALEX=No
+LABELALLMINOR=No
+ALIGNLEFT=No
+ALIGNCENTER=No
+ALIGNRIGHT=No
+ALIGNTOP=No
+ALIGNMIDDLES=No
+ALIGNBOTTOM=No
+
+[AObject]
+Object=Text
+CBorder=None
+w=5
+AliasID1=6
+Pos=473933.64928909915,0.065121113689095192,0,0
+Font=Height=-29,FStyle=0,Color=#0000FF,Name=Arial
+Text="Кп = 66.5"
+JustifyH=Left
+JustifyV=Top
+
+[AObject]
+Object=Text
+CBorder=None
+w=4
+AliasID1=5
+Pos=469194.31279620819,0.049837587006960539,0,0
+Font=Height=-29,FStyle=0,Color=#0000FF,Name=Arial
+Text="Кп = 54.1"
+JustifyH=Left
+JustifyV=Top
+
+[AObject]
+Object=Text
+CBorder=None
+w=3
+AliasID1=4
+Pos=475513.42812006286,0.038147288820142664,0,0
+Font=Height=-29,FStyle=0,Color=#0000FF,Name=Arial
+Text="Кп = 41.1"
+JustifyH=Left
+JustifyV=Top
+
+[AObject]
+Object=Text
+CBorder=None
+w=2
+AliasID1=3
+Pos=480252.76461295382,0.017843086706195756,0,0
+Font=Height=-29,FStyle=0,Color=#0000FF,Name=Arial
+Text="Кп = 27.62"
+JustifyH=Left
+JustifyV=Top
+
+[AObject]
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=5
+AliasID1=6
+Pos=1000000.00000008,0.066546970275837503,1281200.631911532,0.054489095127610264
+Font=Height=-29,FStyle=0,Color=#0000FF,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=4
+AliasID1=5
+Pos=1000000.00000008,0.054112041535727178,1290679.3048973139,0.056605654378276166
+Font=Height=-29,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=3
+AliasID1=4
+Pos=1000000.00000008,0.041073777304824345,1290679.3048973139,0.044300077339520516
+Font=Height=-29,FStyle=0,Color=#FF00FF,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=2
+AliasID1=3
+Pos=1000000.00000008,0.02762029111066043,1358609.7946287517,0.011075019334880124
+Font=Height=-29,FStyle=0,Color=#008000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Object=Text
+CBorder=None
+w=1
+AliasID1=2
+Pos=467614.53396524489,0.033503480278422273,0,0
+Font=Height=-29,FStyle=0,Color=#0000FF,Name=Arial
+Text="Кп = 13.8m / 1m = 13.8m"
+JustifyH=Left
+JustifyV=Top
+
+[AObject]
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=1
+AliasID1=2
+Pos=1000000.00000008,0.013820541155447346,1148499.2101105845,0.027563805104408354
+Font=Height=-29,FStyle=0,Color=#FF0000,Name=Arial
+Format=3
+FormatY=3
+
+[APage]
+
+[FFT WaveForm]
+Expression=v(4)
+What=Mag
+RefFreq
+Window
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3
+NOFmtY=3
+CS=Normal
+Line Color=#0000FF
+Text Color=#0000FF
+Rainbow=False
+LWdth=3
+PlotNum=1
+AliasID=1
+Enable=1
+Auto Scale X=No
+Auto Scale Y=No
+Range Min X=0
+Range Min Y=0
+Range Max X=2000000
+Range Max Y=0.040000000000000001
+Range Grid X=27259.400000000001
+Range Grid Y=5
+Range Bold X=0
+Range Bold Y=0
+LinearX=True
+LinearY=True
+
+[FFT WaveForm]
+Expression=v(4)
+What=Mag
+RefFreq
+Window
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3
+NOFmtY=3
+CS=Normal
+Line Color=#FF0000
+Text Color=#FF0000
+Rainbow=False
+LWdth=3
+PlotNum=1
+AliasID=2
+Enable=0
+Auto Scale X=No
+Auto Scale Y=No
+Range Min X=736176.93522906757
+Range Min Y=0.017843086706195756
+Range Max X=753554.50236966787
+Range Max Y=0.021534759817822463
+Range Grid X=27259.400000000001
+Range Grid Y=0.01
+Range Bold X=0
+Range Bold Y=0
+LinearX=True
+LinearY=True
+
+[FFT WaveForm]
+Expression=v(11)
+What=Mag
+RefFreq
+Window
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3
+NOFmtY=3
+CS=Normal
+Line Color=#008000
+Text Color=#008000
+Rainbow=False
+LWdth=3
+PlotNum=2
+AliasID=3
+Enable=0
+Auto Scale X=No
+Auto Scale Y=No
+Range Min X=736176.93522906757
+Range Min Y=0
+Range Max X=753554.50236966787
+Range Max Y=0.033225058004640373
+Range Grid X=27259.400000000001
+Range Grid Y=0.01
+Range Bold X=0
+Range Bold Y=0
+LinearX=True
+LinearY=True
+
+[FFT WaveForm]
+Expression=v(18)
+What=Mag
+RefFreq
+Window
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3
+NOFmtY=3
+CS=Normal
+Line Color=#FF00FF
+Text Color=#FF00FF
+Rainbow=False
+LWdth=3
+PlotNum=3
+AliasID=4
+Enable=0
+Auto Scale X=No
+Auto Scale Y=No
+Range Min X=736176.93522906757
+Range Min Y=0.019688923262009109
+Range Max X=753554.50236966787
+Range Max Y=0.052913981266649521
+Range Grid X=27259.400000000001
+Range Grid Y=0.01
+Range Bold X=0
+Range Bold Y=0
+LinearX=True
+LinearY=True
+
+[FFT WaveForm]
+Expression=v(25)
+What=Mag
+RefFreq
+Window
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3
+NOFmtY=3
+CS=Normal
+Line Color=#000000
+Text Color=#000000
+Rainbow=False
+LWdth=3
+PlotNum=4
+AliasID=5
+Enable=0
+Auto Scale X=No
+Auto Scale Y=No
+Range Min X=736176.93522906757
+Range Min Y=0.031994500300764797
+Range Max X=753554.50236966787
+Range Max Y=0.065219558305405156
+Range Grid X=27259.400000000001
+Range Grid Y=0.01
+Range Bold X=0
+Range Bold Y=0
+LinearX=True
+LinearY=True
+
+[FFT WaveForm]
+Expression=v(32)
+What=Mag
+RefFreq
+Window
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3
+NOFmtY=3
+CS=Normal
+Line Color=#0000FF
+Text Color=#0000FF
+Rainbow=False
+LWdth=3
+PlotNum=5
+AliasID=6
+Enable=0
+Auto Scale X=No
+Auto Scale Y=No
+Range Min X=736176.93522906757
+Range Min Y=0.046515081206496577
+Range Max X=753554.50236966787
+Range Max Y=0.079740139211136984
+Range Grid X=27259.400000000001
+Range Grid Y=0.01
+Range Bold X=0
+Range Bold Y=0
+LinearX=True
+LinearY=True
+
+[Limits]
+Analysis=Transient
+TMax=4m
+TStart=0
+TStep=100u
+NPts=1001
+Temp=27
+RetraceRuns=1
+StateVar=Zero
+RunOption=Normal
+Temperature Type=Linear
+Accumulate Plots=False
+IgnoreExprErrors=False
+
+[WaveForm]
+Analysis=Transient
+Plt=1
+Page=1
+AliasID=1
+XExp=T
+YExp=v(4)
+XRng=10u,0
+YRng=0.2,-0.2
+Options=LINEARX,LINEARY
+Range Grid X=2e-5
+Range Grid Y=0.02
+Enable=Enable
+Line Color=#0000FF
+Text Color=#0000FF
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[WaveForm]
+Analysis=Transient
+Plt=1
+Page=2
+AliasID=3
+XExp=T
+YExp=v(11)
+XRng=10u,0
+YRng=0.2,-0.2
+Options=LINEARX,LINEARY
+Range Grid X=2e-5
+Range Grid Y=0.02
+Enable=Enable
+Line Color=#FF0000
+Text Color=#FF0000
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[WaveForm]
+Analysis=Transient
+Plt=1
+Page=3
+AliasID=2
+XExp=T
+YExp=v(18)
+XRng=10u,0
+YRng=0.2,-0.2
+Options=LINEARX,LINEARY
+Range Grid X=2e-5
+Range Grid Y=0.02
+Enable=Enable
+Line Color=#006200
+Text Color=#006200
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[WaveForm]
+Analysis=Transient
+Plt=1
+Page=4
+AliasID=4
+XExp=T
+YExp=v(25)
+XRng=10u,0
+YRng=0.2,-0.2
+Options=LINEARX,LINEARY
+Range Grid X=2e-5
+Range Grid Y=0.02
+Enable=Enable
+Line Color=#FF00FF
+Text Color=#FF00FF
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[WaveForm]
+Analysis=Transient
+Plt=1
+Page=5
+AliasID=5
+XExp=T
+YExp=v(32)
+XRng=10u,0
+YRng=0.2,-0.2
+Options=LINEARX,LINEARY
+Range Grid X=2e-5
+Range Grid Y=0.02
+Enable=Enable
+Line Color=#000000
+Text Color=#000000
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[Limits]
+Analysis=DC
+I1Range=10,0,.5
+NPts=51
+Temp=27
+MaxChng=5
+StateVar=Zero
+RunOption=Normal
+Temperature Type=Linear
+Accumulate Plots=False
+IgnoreExprErrors=False
+Sweep1 type=Auto
+Sweep2 type=None
+
+[WaveForm]
+Analysis=DC
+Plt=1
+AliasID=1
+XExp=DCINPUT1
+YExp=v(1)
+XRng=Auto
+YRng=Auto
+Options=LINEARX,LINEARY
+Enable=Enable
+Line Color=#0000FF
+Text Color=#0000FF
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[WaveForm]
+Analysis=DC
+AliasID=-1
+Options=LINEARX,LINEARY
+Enable=Enable
+Line Color=#FF0000
+Text Color=#FF0000
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[WaveForm]
+Analysis=DC
+AliasID=-1
+Options=LINEARX,LINEARY
+Enable=Enable
+Line Color=#008000
+Text Color=#008000
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[Limits]
+Analysis=DynamicAC
+FirstValueDisplay=Mag
+SecondValueDisplay=PhaseDeg
+PlaceText=True
+
+[Limits]
+Analysis=DynamicDC
+Temp=27
+SliderPer=10
+PlaceText=True
+TextPx=744,101
+
+[Pane]
+Analysis=Transient
+CurrentPage 0="1"
+
+[Pane]
+Analysis=AC
+
+[Pane]
+Analysis=DC
+
+[Pane]
+Analysis=HmDistortion
+
+[Pane]
+Analysis=ImDistortion
+
+[Pane]
+Analysis=Stability
+
+[Watch]
+Analysis=Transient
+Format=3
+ExprPercentWidth=80
+
+[Watch]
+Analysis=DC
+Format=3
+ExprPercentWidth=80
+
+[WCTolerance]
+Var Width=100
+Nominal Width=72
+Tol Width=152
+Tol Name=Drift
+Col Width Neq=50
+Col Width Pos=50
+Col Width Rnd=50
+
+[WCFiles]
+UseFile=<Library>Standard.tlib
+AVAILABLE_FILE=<Library>Standard.tlib
+
+[OPMethods]
+Analysis=Transient
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=AC
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=DC
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=HmDistortion
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=ImDistortion
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=Stability
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=DynamicAC
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=DynamicDC
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
